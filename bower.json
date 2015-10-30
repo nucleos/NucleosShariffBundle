@@ -1,0 +1,10 @@
+{
+  "name": "core23-shariff-bundle",
+  "homepage": "http://ni-ju-san.de/",
+  "authors": [
+    "Christian Gripp <contact@core23.de>"
+  ],
+  "dependencies": {
+    "shariff": "1.*"
+  }
+}

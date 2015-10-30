@@ -1,0 +1,12 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    {% spaceless %}
+        <div class="shariff{% if settings.class %} {{ settings.class }}{% endif %}" data-backend-url="{{ path('core23_shariff_share') }}"
+             {% if settings.url %}data-url="{{ settings.url }}"{% endif %}
+			 {% if settings.flattrCategory %}data-flattr-category="{{ settings.flattrCategory }}"{% endif %}
+			 {% if settings.flattrUser %}data-flattr-user="{{ settings.flattrUser }}"{% endif %}
+             {% if settings.services %}data-services="[{% for service in settings.services %}&quot;{{ service }}&quot;{{ loop.last ? '' : ', ' }}{% endfor %}]"{% endif %}
+             data-theme="{{ settings.theme }}" data-orientation="{{ settings.orientation }}"></div>
+    {% endspaceless %}
+{% endblock %}

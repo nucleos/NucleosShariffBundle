@@ -1,0 +1,43 @@
+{
+  "name": "core23/shariff-bundle",
+  "type": "symfony-bundle",
+  "description": "This bundle provides a wrapper for using shariff inside the sonata-project.",
+  "keywords": [
+    "symfony",
+    "shariff",
+    "heise",
+    "facebook",
+    "twitter",
+    "google",
+    "sonata",
+    "block",
+    "widget",
+    "bundle"
+  ],
+  "homepage": "https://core23.de",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christian Gripp",
+      "email": "mail@core23.de"
+    }
+  ],
+  "require": {
+    "symfony/symfony": "~2.3",
+    "sonata-project/block-bundle": "~2.3",
+    "heise/shariff": "~1"
+  },
+  "require-dev": {
+    "symfony/phpunit-bridge": "~2.7|~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Core23\\ShariffBundle\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
