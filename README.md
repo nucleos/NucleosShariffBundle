@@ -1,6 +1,9 @@
 What is ShariffBundle?
 =============================
-[![Build Status](https://secure.travis-ci.org/core23/ShariffBundle.png?branch=master)](http://travis-ci.org/core23/ShariffBundle)
+[![Latest Stable Version](http://img.shields.io/packagist/v/core23/shariff-bundle.svg)](https://packagist.org/packages/core23/shariff-bundle)
+[![Build Status](http://img.shields.io/travis/core23/ShariffBundle.svg)](http://travis-ci.org/core23/ShariffBundle)
+[![Latest Stable Version](https://poser.pugx.org/core23/shariff-bundle/v/stable.png)](https://packagist.org/packages/core23/shariff-bundle)
+[![License](http://img.shields.io/packagist/l/core23/shariff-bundle.svg)](https://packagist.org/packages/core23/shariff-bundle)
 
 This bundle provides a wrapper for using [shariff] inside the symfony sonata-project.
 
