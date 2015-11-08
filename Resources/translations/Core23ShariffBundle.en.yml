@@ -1,0 +1,21 @@
+form.label_url: URL
+form.label_title: Title
+form.label_id: ID
+form.label_class: Style class
+form.label_services: Services
+form.label_theme: Theme
+form.label_orientation: Orientation
+form.label_flattr_user: flattr username
+form.label_flattr_category: flattr category
+form.choice_twitter: Twitter
+form.choice_facebook: Facebook
+form.choice_googleplus: google+
+form.choice_linkedin: LinkedIn
+form.choice_reddit: Reddit
+form.choice_stumbleupon: StumbleUpon
+form.choice_flattr: flattr
+form.choice_pinterest: Pinterest
+form.choice_mail: E-Mail
+form.choice_vertical: Vertical
+form.choice_horizontal: horizontal
+core23.shariff.block.share: Shariff - Social sharing
