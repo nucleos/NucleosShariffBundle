@@ -5,7 +5,6 @@ form.label_class: Style Class
 form.label_services: Dienste
 form.label_theme: Theme
 form.label_orientation: Ausrichtung
-form.label_enabled: Sichtbar
 form.label_flattr_user: flattr Benutzername
 form.label_flattr_category: flattr Kategorie
 form.choice_twitter: Twitter
@@ -19,5 +18,4 @@ form.choice_pinterest: Pinterest
 form.choice_mail: E-Mail
 form.choice_vertical: Vertikal
 form.choice_horizontal: Horizontal
-form.label_id: Id
 core23.shariff.block.share: Shariff - Social Sharing
