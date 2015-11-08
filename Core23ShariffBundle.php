@@ -11,19 +11,8 @@
 
 namespace Core23\ShariffBundle;
 
-use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class Core23ShariffBundle extends Bundle
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function boot()
-    {
-        $options = $this->container->getParameter('core23_shariff.options');
-
-        $fs = new Filesystem();
-        $fs->mkdir($options['cache']['cacheDir']);
-    }
 }

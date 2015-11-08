@@ -13,6 +13,7 @@ namespace Core23\ShariffBundle\Controller;
 
 use Heise\Shariff\Backend;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -26,6 +27,9 @@ class BackendController extends Controller
     public function shariffAction(Request $request)
     {
         $options = $this->getParameter('core23_shariff.options');
+
+        $fs = new Filesystem();
+        $fs->mkdir($options['cache']['cacheDir']);
 
         $shariff = new Backend($options);
         $url     = $request->get('url');
