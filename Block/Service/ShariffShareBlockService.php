@@ -40,50 +40,58 @@ class ShariffShareBlockService extends BaseBlockService
      */
     public function buildEditForm(FormMapper $formMapper, BlockInterface $block)
     {
-        $formMapper->add(
-            'settings',
-            'sonata_type_immutable_array',
-            array(
-                'keys'               => array(
-                    array('url', 'text', array('required'   => false, 'label' => 'form.label_url')),
-                    array('class', 'text', array('required' => false, 'label' => 'form.label_class')),
-                    array('services', 'choice', array(
-                        'choices'  => array(
-                            'twitter'     => 'form.choice_twitter',
-                            'facebook'    => 'form.choice_facebook',
-                            'googleplus'  => 'form.choice_googleplus',
-                            'linkedin'    => 'form.choice_linkedin',
-                            'reddit'      => 'form.choice_reddit',
-                            'stumbleupon' => 'form.choice_stumbleupon',
-                            'flattr'      => 'form.choice_flattr',
-                            'pinterest'   => 'form.choice_pinterest',
-                            'mail'        => 'form.choice_mail',
-                        ),
-                        'required' => false,
-                        'multiple' => true,
-                        'label'    => 'form.label_services',
-                    )),
-                    array('theme', 'choice', array(
-                        'choices' => array(
-                            'standard' => 'standard',
-                            'grey'     => 'grey',
-                            'white'    => 'white',
-                        ),
-                        'label'   => 'form.label_theme',
-                    )),
-                    array('orientation', 'choice', array(
-                        'choices' => array(
-                            'vertical'   => 'form.choice_vertical',
-                            'horizontal' => 'form.choice_horizontal',
-                        ),
-                        'label'   => 'form.label_orientation',
-                    )),
-                    array('flattrUser', 'text', array('required'     => false, 'label' => 'form.label_flattr_user')),
-                    array('flattrCategory', 'text', array('required' => false, 'label' => 'form.label_flattr_category')),
-                ),
-                'translation_domain' => 'Core23ShariffBundle',
-            )
-        );
+        $formMapper->add('settings', 'sonata_type_immutable_array', array(
+            'keys'               => array(
+                array('url', 'text', array(
+                    'label'      => 'form.label_url',
+                    'required'   => false,
+                )),
+                array('class', 'text', array(
+                    'label'    => 'form.label_class',
+                    'required' => false,
+                )),
+                array('services', 'choice', array(
+                    'label'    => 'form.label_services',
+                    'choices'  => array(
+                        'twitter'     => 'form.choice_twitter',
+                        'facebook'    => 'form.choice_facebook',
+                        'googleplus'  => 'form.choice_googleplus',
+                        'linkedin'    => 'form.choice_linkedin',
+                        'reddit'      => 'form.choice_reddit',
+                        'stumbleupon' => 'form.choice_stumbleupon',
+                        'flattr'      => 'form.choice_flattr',
+                        'pinterest'   => 'form.choice_pinterest',
+                        'mail'        => 'form.choice_mail',
+                    ),
+                    'required' => false,
+                    'multiple' => true,
+                )),
+                array('theme', 'choice', array(
+                    'label'   => 'form.label_theme',
+                    'choices' => array(
+                        'standard' => 'standard',
+                        'grey'     => 'grey',
+                        'white'    => 'white',
+                    ),
+                )),
+                array('orientation', 'choice', array(
+                    'label'   => 'form.label_orientation',
+                    'choices' => array(
+                        'vertical'   => 'form.choice_vertical',
+                        'horizontal' => 'form.choice_horizontal',
+                    ),
+                )),
+                array('flattrUser', 'text', array(
+                    'label'        => 'form.label_flattr_user',
+                    'required'     => false,
+                )),
+                array('flattrCategory', 'text', array(
+                    'label'    => 'form.label_flattr_category',
+                    'required' => false,
+                )),
+            ),
+            'translation_domain' => 'Core23ShariffBundle',
+        ));
     }
 
     /**
@@ -91,18 +99,16 @@ class ShariffShareBlockService extends BaseBlockService
      */
     public function configureSettings(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(
-            array(
-                'url'            => null,
-                'class'          => '',
-                'services'       => array('twitter', 'facebook', 'googleplus'),
-                'theme'          => 'standard',
-                'orientation'    => 'horizontal',
-                'flattrUser'     => null,
-                'flattrCategory' => null,
-                'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
-            )
-        );
+        $resolver->setDefaults(array(
+            'url'            => null,
+            'class'          => '',
+            'services'       => array('twitter', 'facebook', 'googleplus'),
+            'theme'          => 'standard',
+            'orientation'    => 'horizontal',
+            'flattrUser'     => null,
+            'flattrCategory' => null,
+            'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
+        ));
     }
 
     /**
@@ -130,6 +136,8 @@ class ShariffShareBlockService extends BaseBlockService
      */
     public function getBlockMetadata($code = null)
     {
-        return new Metadata($this->getName(), (!is_null($code) ? $code : $this->getName()), false, 'Core23ShariffBundle', array('class' => 'fa fa-share-square-o'));
+        return new Metadata($this->getName(), (!is_null($code) ? $code : $this->getName()), false, 'Core23ShariffBundle', array(
+            'class' => 'fa fa-share-square-o',
+        ));
     }
 }
