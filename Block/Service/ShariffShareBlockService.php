@@ -27,9 +27,9 @@ class ShariffShareBlockService extends BaseBlockService
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
         $parameters = array(
-            'context'    => $blockContext,
-            'settings'   => $blockContext->getSettings(),
-            'block'      => $blockContext->getBlock(),
+            'context'  => $blockContext,
+            'settings' => $blockContext->getSettings(),
+            'block'    => $blockContext->getBlock(),
         );
 
         return $this->renderResponse($blockContext->getTemplate(), $parameters, $response);
@@ -41,18 +41,18 @@ class ShariffShareBlockService extends BaseBlockService
     public function buildEditForm(FormMapper $formMapper, BlockInterface $block)
     {
         $formMapper->add('settings', 'sonata_type_immutable_array', array(
-            'keys'               => array(
+            'keys' => array(
                 array('url', 'text', array(
-                    'label'      => 'form.label_url',
-                    'required'   => false,
+                    'label'    => 'form.label_url',
+                    'required' => false,
                 )),
                 array('class', 'text', array(
                     'label'    => 'form.label_class',
                     'required' => false,
                 )),
                 array('services', 'choice', array(
-                    'label'    => 'form.label_services',
-                    'choices'  => array(
+                    'label'   => 'form.label_services',
+                    'choices' => array(
                         'twitter'     => 'form.choice_twitter',
                         'facebook'    => 'form.choice_facebook',
                         'googleplus'  => 'form.choice_googleplus',
@@ -82,8 +82,8 @@ class ShariffShareBlockService extends BaseBlockService
                     ),
                 )),
                 array('flattrUser', 'text', array(
-                    'label'        => 'form.label_flattr_user',
-                    'required'     => false,
+                    'label'    => 'form.label_flattr_user',
+                    'required' => false,
                 )),
                 array('flattrCategory', 'text', array(
                     'label'    => 'form.label_flattr_category',
