@@ -36,10 +36,8 @@ class Core23ShariffExtension extends Extension
 
     public function configureClassesToCompile()
     {
-        $this->addClassesToCompile(
-            array(
-                'Core23\\ShariffBundle\\Block\\Service\\ShariffShareBlockService',
-            )
-        );
+        $this->addClassesToCompile(array(
+            'Core23\\ShariffBundle\\Block\\Service\\ShariffShareBlockService',
+        ));
     }
 }
