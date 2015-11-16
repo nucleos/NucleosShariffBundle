@@ -1,7 +1,7 @@
 form.label_url: URL
 form.label_title: Titel
 form.label_id: ID
-form.label_class: Style Class
+form.label_class: CSS Klasse
 form.label_services: Dienste
 form.label_theme: Theme
 form.label_orientation: Ausrichtung
