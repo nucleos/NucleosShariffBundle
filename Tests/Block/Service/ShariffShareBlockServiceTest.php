@@ -61,6 +61,8 @@ class ShariffShareBlockServiceTest extends AbstractBlockServiceTest
         $blockService = new ShariffShareBlockService('block.service', $this->templating, $this->container);
         $blockService->execute($blockContext);
 
+        $this->assertSame('Core23ShariffBundle:Block:block_shariff.html.twig', $this->templating->view);
+
         $this->assertSame($blockContext, $this->templating->parameters['context']);
         $this->assertInternalType('array', $this->templating->parameters['settings']);
         $this->assertInstanceOf('Sonata\BlockBundle\Model\BlockInterface', $this->templating->parameters['block']);
