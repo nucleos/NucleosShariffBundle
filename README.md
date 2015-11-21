@@ -18,18 +18,18 @@ php composer.phar require core23/shariff-bundle
 
 ```php
 <?php
-// app/AppKernel.php
+    // app/AppKernel.php
 
-	public function registerBundles()
-	{
-		return array(
-			// ...
+    public function registerBundles()
+    {
+        return array(
+            // ...
 
-			new Core23\ShariffBundle\Core23ShariffBundle(),
+            new Core23\ShariffBundle\Core23ShariffBundle(),
 
-			// ...
-		);
-	}
+            // ...
+        );
+    }
 ```
 
 ```yaml
@@ -43,6 +43,7 @@ core23_shariff:
 
 ```twig
 {# template.twig #}
+
 {{ sonata_block_render({ 'type': 'core23.shariff.block.share' }, {
     'url': 'https://example.com/site.html'
 }) }}
@@ -54,12 +55,12 @@ You can globally configure the services that should count the likes or favorites
 
 ```yaml
 core23_shariff:
-	options:
-		cache: 
-			ttl: 60
-			cacheDir: %kernel.cache_dir%/social
-		domain: null
-		services: [ 'GooglePlus', 'Twitter', 'Facebook' ]
+    options:
+        cache:
+            ttl: 60
+            cacheDir: %kernel.cache_dir%/social
+        domain: null
+        services: [ 'GooglePlus', 'Twitter', 'Facebook' ]
 ```
 
 See [shariff-php] for a list of all available services.
