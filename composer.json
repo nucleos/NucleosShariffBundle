@@ -24,7 +24,7 @@
   ],
   "require": {
     "symfony/symfony": "~2.3",
-    "sonata-project/block-bundle": "~2.3",
+    "sonata-project/block-bundle": "~2.4@dev",
     "heise/shariff": "~1"
   },
   "require-dev": {
