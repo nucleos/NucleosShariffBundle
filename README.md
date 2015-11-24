@@ -54,11 +54,15 @@ core23_shariff:
 You can globally configure the services that should count the likes or favorites for a page. 
 
 ```yaml
+doctrine_cache:
+    providers:
+        core23_shariff:
+            type: php_file
+            namespace: core23_shariff
+
+
 core23_shariff:
     options:
-        cache:
-            ttl: 60
-            cacheDir: %kernel.cache_dir%/social
         domain: null
         services: [ 'GooglePlus', 'Twitter', 'Facebook' ]
 ```

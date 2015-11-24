@@ -28,6 +28,7 @@ class Core23ShariffExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('block.xml');
+        $loader->load('service.xml');
 
         $container->setParameter('core23_shariff.options', $config['options']);
 
@@ -37,6 +38,7 @@ class Core23ShariffExtension extends Extension
     public function configureClassesToCompile()
     {
         $this->addClassesToCompile(array(
+            'Core23\\ShariffBundle\\Block\\Cache\\DoctrineCache',
             'Core23\\ShariffBundle\\Block\\Service\\ShariffShareBlockService',
         ));
     }
