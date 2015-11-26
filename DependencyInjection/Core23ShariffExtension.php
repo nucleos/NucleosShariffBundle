@@ -28,7 +28,7 @@ class Core23ShariffExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('block.xml');
-        $loader->load('service.xml');
+        $loader->load('services.xml');
 
         $container->setParameter('core23_shariff.options', $config['options']);
 
