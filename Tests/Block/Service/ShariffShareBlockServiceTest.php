@@ -28,7 +28,7 @@ class ShariffShareBlockServiceTest extends AbstractBlockServiceTest
 
     public function testDefaultSettings()
     {
-        $blockService = new ShariffShareBlockService('block.service', $this->templating, $this->container);
+        $blockService = new ShariffShareBlockService('block.service', $this->templating);
         $blockContext = $this->getBlockContext($blockService);
 
         $this->assertSettings(array(
@@ -58,7 +58,7 @@ class ShariffShareBlockServiceTest extends AbstractBlockServiceTest
             'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
         ));
 
-        $blockService = new ShariffShareBlockService('block.service', $this->templating, $this->container);
+        $blockService = new ShariffShareBlockService('block.service', $this->templating);
         $blockService->execute($blockContext);
 
         $this->assertSame('Core23ShariffBundle:Block:block_shariff.html.twig', $this->templating->view);
