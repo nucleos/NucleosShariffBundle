@@ -27,7 +27,7 @@
     "guzzlehttp/guzzle": "~5.0|~6.0",
     "sonata-project/block-bundle": "~2.4@dev",
     "doctrine/doctrine-cache-bundle": "~1.0",
-    "heise/shariff": "~2.0|~3.0"
+    "heise/shariff": "~2.0|~3.0|~4.0"
   },
   "require-dev": {
     "symfony/phpunit-bridge": "~2.7|~3.0"
