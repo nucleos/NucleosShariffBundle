@@ -5,6 +5,6 @@
     "Christian Gripp <contact@core23.de>"
   ],
   "dependencies": {
-    "shariff": "1.*"
+    "shariff": "~1"
   }
 }
