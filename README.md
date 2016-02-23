@@ -65,7 +65,7 @@ doctrine_cache:
 core23_shariff:
     options:
         domains: [ ] # Allow specific domains for shariff
-        services: [ 'GooglePlus', 'Twitter', 'Facebook' ]
+        services: [ 'GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis' ]
 ```
 
 See [shariff-php] for a list of all available services.

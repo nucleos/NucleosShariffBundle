@@ -33,7 +33,7 @@ class Configuration implements ConfigurationInterface
                         ->defaultValue(array())
                     ->end()
                     ->arrayNode('services')
-                        ->defaultValue(array('GooglePlus', 'Facebook'))
+                        ->defaultValue(array('GooglePlus','Facebook','LinkedIn','Reddit','StumbleUpon','Flattr','Pinterest','Xing','AddThis'))
                         ->prototype('scalar')->end()
                     ->end()
                 ->end()
