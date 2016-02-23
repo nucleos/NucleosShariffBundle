@@ -64,7 +64,7 @@ doctrine_cache:
 
 core23_shariff:
     options:
-        domain: null
+        domains: [ ] # Allow specific domains for shariff
         services: [ 'GooglePlus', 'Twitter', 'Facebook' ]
 ```
 

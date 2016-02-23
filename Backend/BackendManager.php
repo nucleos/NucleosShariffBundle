@@ -36,8 +36,8 @@ class BackendManager extends BaseBackendManager
 
         $baseCacheKey = md5(json_encode($options));
         $services     = $this->serviceFactory->getServicesByName($options['services'], $options);
-        $domain       = $options['domain'];
+        $domains      = $options['domains'];
 
-        parent::__construct($baseCacheKey, $cache, $client, $domain, $services);
+        parent::__construct($baseCacheKey, $cache, $client, $domains, $services);
     }
 }

@@ -27,7 +27,7 @@
     "guzzlehttp/guzzle": "~5.0|~6.0",
     "sonata-project/block-bundle": "~2.4",
     "doctrine/doctrine-cache-bundle": "~1.0",
-    "heise/shariff": ">=2.0"
+    "heise/shariff": ">=5.1"
   },
   "require-dev": {
     "symfony/phpunit-bridge": "~2.7|~3.0"
@@ -41,7 +41,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "1.0.x-dev"
+      "dev-master": "1.1.x-dev"
     }
   }
 }
