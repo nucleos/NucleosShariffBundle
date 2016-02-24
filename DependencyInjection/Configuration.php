@@ -26,11 +26,13 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->arrayNode('options')
+                ->fixXmlConfig('domain')
+                ->fixXmlConfig('service')
                 ->addDefaultsIfNotSet()
                 ->children()
-                    ->fixXmlConfig('domain')
                     ->arrayNode('domains')
                         ->defaultValue(array())
+                        ->prototype('scalar')->end()
                     ->end()
                     ->arrayNode('services')
                         ->defaultValue(array('GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'))
