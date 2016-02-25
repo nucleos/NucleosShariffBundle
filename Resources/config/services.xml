@@ -12,6 +12,10 @@
         <service id="core23.shariff.backend.manager" class="%core23.shariff.backend.manager.class%">
             <argument type="service" id="core23.shariff.cache" />
             <argument>%core23_shariff.options%</argument>
+
+            <call method="setLogger">
+                <argument type="service" id="logger" />
+            </call>
         </service>
 
         <service id="core23.shariff.cache" class="%core23.shariff.cache.class%">
