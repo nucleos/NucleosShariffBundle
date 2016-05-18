@@ -35,7 +35,7 @@ class Core23ShariffExtension extends Extension
         $this->configureClassesToCompile();
     }
 
-    public function configureClassesToCompile()
+    private function configureClassesToCompile()
     {
         $this->addClassesToCompile(array(
             'Core23\\ShariffBundle\\Cache\\DoctrineCache',
