@@ -15,17 +15,9 @@ use Core23\ShariffBundle\Block\Service\ShariffShareBlockService;
 use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Model\Block;
 use Sonata\BlockBundle\Tests\Block\AbstractBlockServiceTest;
-use Sonata\BlockBundle\Tests\Block\Service\FakeTemplating;
 
 class ShariffShareBlockServiceTest extends AbstractBlockServiceTest
 {
-    protected function setUp()
-    {
-        parent::setUp();
-
-        $this->templating      = new FakeTemplating();
-    }
-
     public function testDefaultSettings()
     {
         $blockService = new ShariffShareBlockService('block.service', $this->templating);
