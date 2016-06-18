@@ -36,7 +36,10 @@
   "autoload": {
     "psr-4": {
       "Core23\\ShariffBundle\\": ""
-    }
+    },
+    "exclude-from-classmap": [
+        "/Tests/"
+    ]
   },
   "extra": {
     "branch-alias": {
