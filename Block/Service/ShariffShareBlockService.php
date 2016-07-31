@@ -15,7 +15,10 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\BlockBundle\Block\BaseBlockService;
 use Sonata\BlockBundle\Block\BlockContextInterface;
 use Sonata\BlockBundle\Model\BlockInterface;
+use Sonata\CoreBundle\Form\Type\ImmutableArrayType;
 use Sonata\CoreBundle\Model\Metadata;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -40,33 +43,34 @@ class ShariffShareBlockService extends BaseBlockService
      */
     public function buildEditForm(FormMapper $formMapper, BlockInterface $block)
     {
-        $formMapper->add('settings', 'sonata_type_immutable_array', array(
+        $formMapper->add('settings', ImmutableArrayType::class, array(
             'keys' => array(
-                array('url', 'text', array(
+                array('url', TextType::class, array(
                     'label'    => 'form.label_url',
                     'required' => false,
                 )),
-                array('class', 'text', array(
+                array('class', TextType::class, array(
                     'label'    => 'form.label_class',
                     'required' => false,
                 )),
-                array('services', 'choice', array(
+                array('services', ChoiceType::class, array(
                     'label'   => 'form.label_services',
                     'choices' => array(
-                        'twitter'     => 'form.choice_twitter',
-                        'facebook'    => 'form.choice_facebook',
-                        'googleplus'  => 'form.choice_googleplus',
-                        'linkedin'    => 'form.choice_linkedin',
-                        'reddit'      => 'form.choice_reddit',
-                        'stumbleupon' => 'form.choice_stumbleupon',
-                        'flattr'      => 'form.choice_flattr',
-                        'pinterest'   => 'form.choice_pinterest',
-                        'mail'        => 'form.choice_mail',
+                        'form.choice_twitter'     => 'twitter',
+                        'form.choice_facebook'    => 'facebook',
+                        'form.choice_googleplus'  => 'googleplus',
+                        'form.choice_linkedin'    => 'linkedin',
+                        'form.choice_reddit'      => 'reddit',
+                        'form.choice_stumbleupon' => 'stumbleupon',
+                        'form.choice_flattr'      => 'flattr',
+                        'form.choice_pinterest'   => 'pinterest',
+                        'form.choice_mail'        => 'mail',
                     ),
-                    'required' => false,
-                    'multiple' => true,
+                    'choices_as_values' => true,
+                    'required'          => false,
+                    'multiple'          => true,
                 )),
-                array('theme', 'choice', array(
+                array('theme', ChoiceType::class, array(
                     'label'   => 'form.label_theme',
                     'choices' => array(
                         'standard' => 'standard',
@@ -74,18 +78,19 @@ class ShariffShareBlockService extends BaseBlockService
                         'white'    => 'white',
                     ),
                 )),
-                array('orientation', 'choice', array(
+                array('orientation', ChoiceType::class, array(
                     'label'   => 'form.label_orientation',
                     'choices' => array(
-                        'vertical'   => 'form.choice_vertical',
-                        'horizontal' => 'form.choice_horizontal',
+                        'form.choice_vertical'   => 'vertical',
+                        'form.choice_horizontal' => 'horizontal',
                     ),
+                    'choices_as_values' => true,
                 )),
-                array('flattrUser', 'text', array(
+                array('flattrUser', TextType::class, array(
                     'label'    => 'form.label_flattr_user',
                     'required' => false,
                 )),
-                array('flattrCategory', 'text', array(
+                array('flattrCategory', TextType::class, array(
                     'label'    => 'form.label_flattr_category',
                     'required' => false,
                 )),
