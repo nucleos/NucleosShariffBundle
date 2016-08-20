@@ -24,8 +24,8 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
 
         $expected = array(
             'options' => array(
-                'domains'   => array(),
-                'services'  => array('GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'),
+                'domains'  => array(),
+                'services' => array('GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'),
             ),
         );
 
@@ -45,8 +45,8 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
 
         $expected = array(
             'options' => array(
-                'domains'   => array('http://foo.bar'),
-                'services'  => array('GooglePlus'),
+                'domains'  => array('http://foo.bar'),
+                'services' => array('GooglePlus'),
             ),
         );
 

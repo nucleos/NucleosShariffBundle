@@ -31,7 +31,7 @@ class BackendManager extends BaseBackendManager
      */
     public function __construct(CacheInterface $cache, array $options)
     {
-        $client = new Client();
+        $client               = new Client();
         $this->serviceFactory = new ServiceFactory($client);
 
         $baseCacheKey = md5(json_encode($options));
