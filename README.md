@@ -3,7 +3,6 @@ What is ShariffBundle?
 [![Latest Stable Version](https://poser.pugx.org/core23/shariff-bundle/v/stable)](https://packagist.org/packages/core23/shariff-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/core23/shariff-bundle/v/unstable)](https://packagist.org/packages/core23/shariff-bundle)
 [![Build Status](http://img.shields.io/travis/core23/ShariffBundle.svg)](http://travis-ci.org/core23/ShariffBundle)
-[![Dependency Status](https://www.versioneye.com/php/core23:shariff-bundle/badge.svg)](https://www.versioneye.com/php/core23:shariff-bundle)
 [![License](http://img.shields.io/packagist/l/core23/shariff-bundle.svg)](https://packagist.org/packages/core23/shariff-bundle)
 
 
