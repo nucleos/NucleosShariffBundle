@@ -27,7 +27,7 @@
     "doctrine/doctrine-cache-bundle": "^1.0",
     "guzzlehttp/guzzle": "^5.0 || ^6.0",
     "heise/shariff": "^5.1 || ^6.0",
-    "sonata-project/block-bundle": "^3.2.0",
+    "sonata-project/block-bundle": "^3.3.0",
     "symfony/assetic-bundle": "^2.8.1",
     "symfony/framework-bundle": "^2.8.6 || ^3.0",
     "symfony/form": "^2.8.6 || ^3.1"
