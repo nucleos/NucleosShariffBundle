@@ -22,7 +22,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ShariffShareBlockService extends AbstractAdminBlockService
+final class ShariffShareBlockService extends AbstractAdminBlockService
 {
     /**
      * {@inheritdoc}

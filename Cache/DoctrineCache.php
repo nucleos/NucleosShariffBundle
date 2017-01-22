@@ -14,7 +14,7 @@ namespace Core23\ShariffBundle\Cache;
 use Doctrine\Common\Cache\Cache;
 use Heise\Shariff\CacheInterface;
 
-class DoctrineCache implements CacheInterface
+final class DoctrineCache implements CacheInterface
 {
     /**
      * @var Cache

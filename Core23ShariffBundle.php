@@ -13,6 +13,6 @@ namespace Core23\ShariffBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class Core23ShariffBundle extends Bundle
+final class Core23ShariffBundle extends Bundle
 {
 }

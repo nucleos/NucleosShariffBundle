@@ -16,7 +16,7 @@ use Heise\Shariff\Backend\BackendManager as BaseBackendManager;
 use Heise\Shariff\Backend\ServiceFactory;
 use Heise\Shariff\CacheInterface;
 
-class BackendManager extends BaseBackendManager
+final class BackendManager extends BaseBackendManager
 {
     /**
      * @var ServiceFactory

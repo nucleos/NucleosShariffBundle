@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class Core23ShariffExtension extends Extension
+final class Core23ShariffExtension extends Extension
 {
     /**
      * {@inheritdoc}
