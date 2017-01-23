@@ -34,12 +34,4 @@ final class Core23ShariffExtension extends Extension
 
         $this->configureClassesToCompile();
     }
-
-    private function configureClassesToCompile()
-    {
-        $this->addClassesToCompile(array(
-            'Core23\\ShariffBundle\\Cache\\DoctrineCache',
-            'Core23\\ShariffBundle\\Block\\Service\\ShariffShareBlockService',
-        ));
-    }
 }
