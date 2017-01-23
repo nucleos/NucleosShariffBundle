@@ -31,7 +31,5 @@ final class Core23ShariffExtension extends Extension
         $loader->load('services.xml');
 
         $container->setParameter('core23_shariff.options', $config['options']);
-
-        $this->configureClassesToCompile();
     }
 }
