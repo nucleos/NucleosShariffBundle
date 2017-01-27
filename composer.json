@@ -49,9 +49,6 @@
         "/Tests/"
     ]
   },
-  "autoload-dev": {
-    "psr-4": { "Core23\\ShariffBundle\\Tests\\": "Tests/" }
-  },
   "extra": {
     "branch-alias": {
       "dev-master": "2.x-dev"
