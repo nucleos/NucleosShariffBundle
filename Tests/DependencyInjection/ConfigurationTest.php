@@ -10,9 +10,10 @@
 namespace Core23\ShariffBundle\Tests\DependencyInjection;
 
 use Core23\ShariffBundle\DependencyInjection\Configuration;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Processor;
 
-class ConfigurationTest extends \PHPUnit_Framework_TestCase
+class ConfigurationTest extends TestCase
 {
     public function testDefaultOptions()
     {
