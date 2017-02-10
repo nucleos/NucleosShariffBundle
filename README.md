@@ -2,10 +2,13 @@ What is ShariffBundle?
 =============================
 [![Latest Stable Version](https://poser.pugx.org/core23/shariff-bundle/v/stable)](https://packagist.org/packages/core23/shariff-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/core23/shariff-bundle/v/unstable)](https://packagist.org/packages/core23/shariff-bundle)
-[![Build Status](http://img.shields.io/travis/core23/ShariffBundle.svg)](http://travis-ci.org/core23/ShariffBundle)
-[![License](http://img.shields.io/packagist/l/core23/shariff-bundle.svg)](https://packagist.org/packages/core23/shariff-bundle)
+[![License](https://poser.pugx.org/core23/shariff-bundle/license)](https://packagist.org/packages/core23/shariff-bundle)
 
-
+[![Build Status](https://travis-ci.org/core23/ShariffBundle.svg)](https://travis-ci.org/core23/ShariffBundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/core23/ShariffBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/core23/ShariffBundle)
+[![Code Climate](https://codeclimate.com/github/core23/ShariffBundle/badges/gpa.svg)](https://codeclimate.com/github/core23/ShariffBundle)
+[![Coverage Status](https://coveralls.io/repos/core23/ShariffBundle/badge.svg)](https://coveralls.io/r/core23/ShariffBundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/c55567df-e9da-41ec-8509-4030e5363b17/mini.png)](https://insight.sensiolabs.com/projects/c55567df-e9da-41ec-8509-4030e5363b17)
 
 [![Donate to this project using Flattr](https://img.shields.io/badge/flattr-donate-yellow.svg)](https://flattr.com/profile/core23)
 [![Donate to this project using PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://paypal.me/gripp)
