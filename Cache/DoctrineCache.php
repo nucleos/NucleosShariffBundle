@@ -47,7 +47,7 @@ final class DoctrineCache implements CacheInterface
      *
      * @return string
      */
-    public function getItem($key)
+    public function getItem($key): string
     {
         return $this->cache->fetch($key);
     }
@@ -59,7 +59,7 @@ final class DoctrineCache implements CacheInterface
      *
      * @return bool
      */
-    public function hasItem($key)
+    public function hasItem($key): bool
     {
         return $this->cache->contains($key);
     }

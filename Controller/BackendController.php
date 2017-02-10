@@ -21,7 +21,7 @@ final class BackendController extends Controller
      *
      * @return JsonResponse
      */
-    public function shariffAction(Request $request)
+    public function shariffAction(Request $request): JsonResponse
     {
         $url    = $request->get('url');
         $result = $this->getBackendManager()->get($url);
@@ -32,7 +32,7 @@ final class BackendController extends Controller
     /**
      * @return BackendManager
      */
-    private function getBackendManager()
+    private function getBackendManager(): BackendManager
     {
         return $this->get('core23.shariff.backend.manager');
     }
