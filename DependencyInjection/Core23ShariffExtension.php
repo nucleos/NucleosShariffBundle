@@ -28,6 +28,14 @@ final class Core23ShariffExtension extends Extension
         $loader->load('block.xml');
         $loader->load('services.xml');
 
-        $container->setParameter('core23_shariff.options', $config['options']);
+        $options = $config['options'];
+
+        if (empty($config['services']['facebook']['app_id']) || empty($config['services']['facebook']['secret'])) {
+            $options['services'] = array_diff($options['services'], array('Facebook'));
+        } else {
+            $options['Facebook'] = $config['services']['facebook'];
+        }
+
+        $container->setParameter('core23_shariff.options', $options);
     }
 }

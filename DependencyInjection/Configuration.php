@@ -38,6 +38,16 @@ final class Configuration implements ConfigurationInterface
                     ->end()
                 ->end()
             ->end()
+            ->arrayNode('services')
+                ->children()
+                    ->arrayNode('facebook')
+                    ->children()
+                        ->scalarNode('app_id')->end()
+                        ->scalarNode('secret')->end()
+                    ->end()
+                ->end()
+            ->end()
+        ->end()
         ;
 
         return $treeBuilder;

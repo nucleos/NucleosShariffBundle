@@ -71,6 +71,11 @@ core23_shariff:
     options:
         domains: [ ] # Allow specific domains for shariff
         services: [ 'GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis' ]
+    services:
+        # Optional configuration when using facebook service
+        facebook:
+            app_id: 1234567890
+            secret: GENERATEDSECRET
 ```
 
 See [shariff-php] for a list of all available services.
