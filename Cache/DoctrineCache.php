@@ -17,7 +17,7 @@ final class DoctrineCache implements CacheInterface
     /**
      * @var Cache
      */
-    protected $cache;
+    private $cache;
 
     /**
      * DoctrineCache constructor.
