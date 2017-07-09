@@ -12,8 +12,8 @@ namespace Core23\ShariffBundle\Tests\Block\Service;
 use Core23\ShariffBundle\Block\Service\ShariffShareBlockService;
 use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Model\Block;
-use Sonata\BlockBundle\Test\AbstractBlockServiceTestCase;
 use Sonata\BlockBundle\Model\BlockInterface;
+use Sonata\BlockBundle\Test\AbstractBlockServiceTestCase;
 
 class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
 {
