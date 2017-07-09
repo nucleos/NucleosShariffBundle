@@ -13,6 +13,7 @@ use Core23\ShariffBundle\Block\Service\ShariffShareBlockService;
 use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Model\Block;
 use Sonata\BlockBundle\Test\AbstractBlockServiceTestCase;
+use Sonata\BlockBundle\Model\BlockInterface;
 
 class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
 {
@@ -55,6 +56,6 @@ class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
 
         $this->assertSame($blockContext, $this->templating->parameters['context']);
         $this->assertInternalType('array', $this->templating->parameters['settings']);
-        $this->assertInstanceOf('Sonata\BlockBundle\Model\BlockInterface', $this->templating->parameters['block']);
+        $this->assertInstanceOf(BlockInterface::class, $this->templating->parameters['block']);
     }
 }
