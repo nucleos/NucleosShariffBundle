@@ -23,7 +23,7 @@
     }
   ],
   "require": {
-    "php": "^7.0",
+    "php": "^7.1",
     "doctrine/doctrine-cache-bundle": "^1.0",
     "guzzlehttp/guzzle": "^5.0 || ^6.0",
     "heise/shariff": "^5.1 || ^6.0 || ^7.0",
