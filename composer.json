@@ -45,11 +45,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Core23\\ShariffBundle\\": ""
-    },
-    "exclude-from-classmap": [
-        "/Tests/"
-    ]
+      "Core23\\ShariffBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Core23\\ShariffBundle\\Tests\\": "tests/"
+    }
   },
   "extra": {
     "branch-alias": {
