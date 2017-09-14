@@ -1,0 +1,42 @@
+14/09/2017 07:39  2.0.0  2.0.0
+77e5afd Drop support for old shariff-backend-php
+cf14f1c Added type hints
+f527063 [travis] Moved phpstan to allow failures
+e6e7ba5 Missing test files after refactoring folder structure
+ed13abf Refactor folder structure
+a9302d6 Use latest phpstan version
+33815de Dropped support for PHP 7.0
+f35a7ff Sorted dependencies
+cc53a9c Fixed PHPStan runner
+aa812b0 Added PHPStan checks to travis
+f46cbb9 Added option to sort composer packages
+effa08d Removed HHVM from travis setup
+8f8d205 Dropped support for outdated symfony versions
+8e6b13a Fixed wrong export-ignore entry
+d42b506 Apply fixes from StyleCI
+ca30a19 Use new PHP features (::class, null coalescing)
+6acfda7 Fixed CS
+d2e39cc Added support for shariff 7.x
+e42e789 Added workaround for composer bug #6207
+c95789f Created liip/rmt config
+cf313a7 Added simple tests for controller
+5767fe0 Added unit tests for dependency injection
+59c206a Fixed array indices in service configuration
+3ec0d82 Added required configuration for facebook service
+965a852 Added missing translation for AddThis
+2a22567 Updated bower dependencies
+2960fcf Added xing and AddThis to shariff block
+42650c2 Drop old phpunit-bridge
+04c0b61 Updated travis config
+44aa4e6 Updated badges
+6eafff3 Added PHP 7 type declarations
+1ee25ff Update for PHPUnit 5.7
+83913f4 Fixed cs
+917507d Updated file header
+d46b127 Removed useless autoload-dev entry
+7e61a32 Removed deprecated configureClassesToCompile method
+ce46c2c Removed deprecated configureClassesToCompile method
+fabf4ca Revert: Disallow simplified_null_return fixer
+65c36b3 Disallow simplified_null_return fixer
+6f1b3cb Closing public API
+f875fbc Cleanup dependencies
