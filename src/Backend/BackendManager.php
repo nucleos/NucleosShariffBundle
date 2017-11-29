@@ -17,11 +17,6 @@ use Heise\Shariff\CacheInterface;
 final class BackendManager extends BaseBackendManager
 {
     /**
-     * @var ServiceFactory
-     */
-    private $serviceFactory;
-
-    /**
      * BackendManager constructor.
      *
      * @param CacheInterface $cache
@@ -29,11 +24,11 @@ final class BackendManager extends BaseBackendManager
      */
     public function __construct(CacheInterface $cache, array $options)
     {
-        $client               = new Client();
-        $this->serviceFactory = new ServiceFactory($client);
+        $client         = new Client();
+        $serviceFactory = new ServiceFactory($client);
 
         $baseCacheKey = md5(json_encode($options));
-        $services     = $this->serviceFactory->getServicesByName($options['services'], $options);
+        $services     = $serviceFactory->getServicesByName($options['services'], $options);
         $domains      = $options['domains'];
 
         parent::__construct($baseCacheKey, $cache, $client, $domains, $services);

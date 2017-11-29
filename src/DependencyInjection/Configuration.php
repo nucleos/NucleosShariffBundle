@@ -9,6 +9,7 @@
 
 namespace Core23\ShariffBundle\DependencyInjection;
 
+use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -20,34 +21,37 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('core23_shariff')->children();
+
+        /** @var ArrayNodeDefinition $node */
+        $rootNode    = $treeBuilder->root('core23_shariff');
 
         $rootNode
-            ->arrayNode('options')
-                ->fixXmlConfig('domain')
-                ->fixXmlConfig('service')
-                ->addDefaultsIfNotSet()
-                ->children()
-                    ->arrayNode('domains')
-                        ->defaultValue(array())
-                        ->prototype('scalar')->end()
-                    ->end()
-                    ->arrayNode('services')
-                        ->defaultValue(array('GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'))
-                        ->prototype('scalar')->end()
-                    ->end()
-                ->end()
-            ->end()
-            ->arrayNode('services')
-                ->children()
-                    ->arrayNode('facebook')
+            ->children()
+                ->arrayNode('options')
+                    ->fixXmlConfig('domain')
+                    ->fixXmlConfig('service')
+                    ->addDefaultsIfNotSet()
                     ->children()
-                        ->scalarNode('app_id')->end()
-                        ->scalarNode('secret')->end()
+                        ->arrayNode('domains')
+                            ->defaultValue(array())
+                            ->prototype('scalar')->end()
+                        ->end()
+                        ->arrayNode('services')
+                            ->defaultValue(array('GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'))
+                            ->prototype('scalar')->end()
+                        ->end()
+                    ->end()
+                ->end()
+                ->arrayNode('services')
+                    ->children()
+                        ->arrayNode('facebook')
+                        ->children()
+                            ->scalarNode('app_id')->end()
+                            ->scalarNode('secret')->end()
+                        ->end()
                     ->end()
                 ->end()
             ->end()
-        ->end()
         ;
 
         return $treeBuilder;
