@@ -122,7 +122,7 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
     public function getJavascripts($media)
     {
         return array(
-            '/assets/js/shariff.js',
+            '/assets/javascript/shariff.js',
         );
     }
 
@@ -132,7 +132,7 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
     public function getStylesheets($media)
     {
         return array(
-            '/assets/css/shariff.css',
+            '/assets/stylesheet/shariff.css',
         );
     }
 
