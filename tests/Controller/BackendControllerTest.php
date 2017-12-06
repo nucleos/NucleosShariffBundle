@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Christian Gripp <mail@core23.de>
  *
@@ -16,12 +18,12 @@ class BackendControllerTest extends TestCase
 {
     private $controller;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->controller = new BackendController();
     }
 
-    public function testItIsInstantiable()
+    public function testItIsInstantiable(): void
     {
         $this->assertNotNull($this->controller);
     }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Christian Gripp <mail@core23.de>
  *
@@ -14,41 +16,41 @@ use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 
 class Core23ShariffExtensionTest extends AbstractExtensionTestCase
 {
-    public function testLoadDefault()
+    public function testLoadDefault(): void
     {
         $this->load();
 
-        $this->assertContainerBuilderHasParameter('core23_shariff.options', array(
-            'domains'  => array(),
-            'services' => array('GooglePlus', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'),
-        ));
+        $this->assertContainerBuilderHasParameter('core23_shariff.options', [
+            'domains'  => [],
+            'services' => ['GooglePlus', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'],
+        ]);
     }
 
-    public function testLoadFacebook()
+    public function testLoadFacebook(): void
     {
-        $this->load(array(
-            'services' => array(
-                'facebook' => array(
+        $this->load([
+            'services' => [
+                'facebook' => [
                     'app_id' => 'foo_id',
                     'secret' => 'app_secret',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
-        $this->assertContainerBuilderHasParameter('core23_shariff.options', array(
-            'domains'  => array(),
-            'services' => array('GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'),
-            'Facebook' => array(
+        $this->assertContainerBuilderHasParameter('core23_shariff.options', [
+            'domains'  => [],
+            'services' => ['GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'],
+            'Facebook' => [
                 'app_id' => 'foo_id',
                 'secret' => 'app_secret',
-            ),
-        ));
+            ],
+        ]);
     }
 
     protected function getContainerExtensions(): array
     {
-        return array(
+        return [
             new Core23ShariffExtension(),
-        );
+        ];
     }
 }

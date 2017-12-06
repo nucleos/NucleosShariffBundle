@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Christian Gripp <mail@core23.de>
  *
@@ -15,39 +17,39 @@ use Symfony\Component\Config\Definition\Processor;
 
 class ConfigurationTest extends TestCase
 {
-    public function testDefaultOptions()
+    public function testDefaultOptions(): void
     {
         $processor = new Processor();
 
-        $config = $processor->processConfiguration(new Configuration(), array(array()));
+        $config = $processor->processConfiguration(new Configuration(), [[]]);
 
-        $expected = array(
-            'options' => array(
-                'domains'  => array(),
-                'services' => array('GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'),
-            ),
-        );
+        $expected = [
+            'options' => [
+                'domains'  => [],
+                'services' => ['GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'],
+            ],
+        ];
 
         $this->assertSame($expected, $config);
     }
 
-    public function testOptions()
+    public function testOptions(): void
     {
         $processor = new Processor();
 
-        $config = $processor->processConfiguration(new Configuration(), array(array(
-            'options' => array(
+        $config = $processor->processConfiguration(new Configuration(), [[
+            'options' => [
                 'domain'  => 'http://foo.bar',
                 'service' => 'GooglePlus',
-            ),
-        )));
+            ],
+        ]]);
 
-        $expected = array(
-            'options' => array(
-                'domains'  => array('http://foo.bar'),
-                'services' => array('GooglePlus'),
-            ),
-        );
+        $expected = [
+            'options' => [
+                'domains'  => ['http://foo.bar'],
+                'services' => ['GooglePlus'],
+            ],
+        ];
 
         $this->assertSame($expected, $config);
     }

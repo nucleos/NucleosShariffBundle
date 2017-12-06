@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Christian Gripp <mail@core23.de>
  *
@@ -27,11 +29,11 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
      */
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
-        $parameters = array(
+        $parameters = [
             'context'  => $blockContext,
             'settings' => $blockContext->getSettings(),
             'block'    => $blockContext->getBlock(),
-        );
+        ];
 
         return $this->renderResponse($blockContext->getTemplate(), $parameters, $response);
     }
@@ -39,21 +41,21 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
     /**
      * {@inheritdoc}
      */
-    public function buildEditForm(FormMapper $formMapper, BlockInterface $block)
+    public function buildEditForm(FormMapper $formMapper, BlockInterface $block): void
     {
-        $formMapper->add('settings', ImmutableArrayType::class, array(
-            'keys' => array(
-                array('url', TextType::class, array(
+        $formMapper->add('settings', ImmutableArrayType::class, [
+            'keys' => [
+                ['url', TextType::class, [
                     'label'    => 'form.label_url',
                     'required' => false,
-                )),
-                array('class', TextType::class, array(
+                ]],
+                ['class', TextType::class, [
                     'label'    => 'form.label_class',
                     'required' => false,
-                )),
-                array('services', ChoiceType::class, array(
+                ]],
+                ['services', ChoiceType::class, [
                     'label'   => 'form.label_services',
-                    'choices' => array(
+                    'choices' => [
                         'form.choice_twitter'     => 'twitter',
                         'form.choice_facebook'    => 'facebook',
                         'form.choice_googleplus'  => 'googleplus',
@@ -65,55 +67,55 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
                         'form.choice_pinterest'   => 'pinterest',
                         'form.choice_xing'        => 'xing',
                         'form.choice_mail'        => 'mail',
-                    ),
+                    ],
                     'choices_as_values' => true,
                     'required'          => false,
                     'multiple'          => true,
-                )),
-                array('theme', ChoiceType::class, array(
+                ]],
+                ['theme', ChoiceType::class, [
                     'label'   => 'form.label_theme',
-                    'choices' => array(
+                    'choices' => [
                         'standard' => 'standard',
                         'grey'     => 'grey',
                         'white'    => 'white',
-                    ),
-                )),
-                array('orientation', ChoiceType::class, array(
+                    ],
+                ]],
+                ['orientation', ChoiceType::class, [
                     'label'   => 'form.label_orientation',
-                    'choices' => array(
+                    'choices' => [
                         'form.choice_vertical'   => 'vertical',
                         'form.choice_horizontal' => 'horizontal',
-                    ),
+                    ],
                     'choices_as_values' => true,
-                )),
-                array('flattrUser', TextType::class, array(
+                ]],
+                ['flattrUser', TextType::class, [
                     'label'    => 'form.label_flattr_user',
                     'required' => false,
-                )),
-                array('flattrCategory', TextType::class, array(
+                ]],
+                ['flattrCategory', TextType::class, [
                     'label'    => 'form.label_flattr_category',
                     'required' => false,
-                )),
-            ),
+                ]],
+            ],
             'translation_domain' => 'Core23ShariffBundle',
-        ));
+        ]);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function configureSettings(OptionsResolver $resolver)
+    public function configureSettings(OptionsResolver $resolver): void
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'url'            => null,
             'class'          => '',
-            'services'       => array('twitter', 'facebook', 'googleplus'),
+            'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
             'flattrUser'     => null,
             'flattrCategory' => null,
             'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
-        ));
+        ]);
     }
 
     /**
@@ -121,9 +123,9 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
      */
     public function getJavascripts($media)
     {
-        return array(
+        return [
             '/assets/javascript/shariff.js',
-        );
+        ];
     }
 
     /**
@@ -131,9 +133,9 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
      */
     public function getStylesheets($media)
     {
-        return array(
+        return [
             '/assets/stylesheet/shariff.css',
-        );
+        ];
     }
 
     /**
@@ -141,8 +143,8 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
      */
     public function getBlockMetadata($code = null)
     {
-        return new Metadata($this->getName(), $code ?? $this->getName(), false, 'Core23ShariffBundle', array(
+        return new Metadata($this->getName(), $code ?? $this->getName(), false, 'Core23ShariffBundle', [
             'class' => 'fa fa-share-square-o',
-        ));
+        ]);
     }
 }

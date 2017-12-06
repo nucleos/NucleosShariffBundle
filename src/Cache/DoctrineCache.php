@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Christian Gripp <mail@core23.de>
  *
@@ -35,7 +37,7 @@ final class DoctrineCache implements CacheInterface
      * @param string $key
      * @param string $content
      */
-    public function setItem($key, $content) : void
+    public function setItem($key, $content): void
     {
         $this->cache->save($key, $content);
     }

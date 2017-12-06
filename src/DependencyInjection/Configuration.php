@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Christian Gripp <mail@core23.de>
  *
@@ -23,7 +25,7 @@ final class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
 
         /** @var ArrayNodeDefinition $node */
-        $rootNode    = $treeBuilder->root('core23_shariff');
+        $rootNode = $treeBuilder->root('core23_shariff');
 
         $rootNode
             ->children()
@@ -33,11 +35,11 @@ final class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->arrayNode('domains')
-                            ->defaultValue(array())
+                            ->defaultValue([])
                             ->prototype('scalar')->end()
                         ->end()
                         ->arrayNode('services')
-                            ->defaultValue(array('GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'))
+                            ->defaultValue(['GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'])
                             ->prototype('scalar')->end()
                         ->end()
                     ->end()

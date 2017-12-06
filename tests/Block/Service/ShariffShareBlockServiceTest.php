@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) Christian Gripp <mail@core23.de>
  *
@@ -17,37 +19,37 @@ use Sonata\BlockBundle\Test\AbstractBlockServiceTestCase;
 
 class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
 {
-    public function testDefaultSettings()
+    public function testDefaultSettings(): void
     {
         $blockService = new ShariffShareBlockService('block.service', $this->templating);
         $blockContext = $this->getBlockContext($blockService);
 
-        $this->assertSettings(array(
+        $this->assertSettings([
             'url'            => null,
             'class'          => '',
-            'services'       => array('twitter', 'facebook', 'googleplus'),
+            'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
             'flattrUser'     => null,
             'flattrCategory' => null,
             'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
-        ), $blockContext);
+        ], $blockContext);
     }
 
-    public function testExecute()
+    public function testExecute(): void
     {
         $block = new Block();
 
-        $blockContext = new BlockContext($block, array(
+        $blockContext = new BlockContext($block, [
             'url'            => null,
             'class'          => '',
-            'services'       => array('twitter', 'facebook', 'googleplus'),
+            'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
             'flattrUser'     => null,
             'flattrCategory' => null,
             'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
-        ));
+        ]);
 
         $blockService = new ShariffShareBlockService('block.service', $this->templating);
         $blockService->execute($blockContext);
