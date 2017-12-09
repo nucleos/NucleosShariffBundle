@@ -68,9 +68,8 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
                         'form.choice_xing'        => 'xing',
                         'form.choice_mail'        => 'mail',
                     ],
-                    'choices_as_values' => true,
-                    'required'          => false,
-                    'multiple'          => true,
+                    'required' => false,
+                    'multiple' => true,
                 ]],
                 ['theme', ChoiceType::class, [
                     'label'   => 'form.label_theme',
@@ -86,7 +85,6 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
                         'form.choice_vertical'   => 'vertical',
                         'form.choice_horizontal' => 'horizontal',
                     ],
-                    'choices_as_values' => true,
                 ]],
                 ['flattrUser', TextType::class, [
                     'label'    => 'form.label_flattr_user',
