@@ -6,7 +6,6 @@ What is ShariffBundle?
 
 [![Build Status](https://travis-ci.org/core23/ShariffBundle.svg)](https://travis-ci.org/core23/ShariffBundle)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/core23/ShariffBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/core23/ShariffBundle)
-[![Code Climate](https://codeclimate.com/github/core23/ShariffBundle/badges/gpa.svg)](https://codeclimate.com/github/core23/ShariffBundle)
 [![Coverage Status](https://coveralls.io/repos/core23/ShariffBundle/badge.svg)](https://coveralls.io/r/core23/ShariffBundle)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/c55567df-e9da-41ec-8509-4030e5363b17/mini.png)](https://insight.sensiolabs.com/projects/c55567df-e9da-41ec-8509-4030e5363b17)
 
