@@ -32,7 +32,7 @@ class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
             'orientation'    => 'horizontal',
             'flattrUser'     => null,
             'flattrCategory' => null,
-            'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
+            'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
         ], $blockContext);
     }
 
@@ -48,13 +48,13 @@ class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
             'orientation'    => 'horizontal',
             'flattrUser'     => null,
             'flattrCategory' => null,
-            'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
+            'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
         ]);
 
         $blockService = new ShariffShareBlockService('block.service', $this->templating);
         $blockService->execute($blockContext);
 
-        $this->assertSame('Core23ShariffBundle:Block:block_shariff.html.twig', $this->templating->view);
+        $this->assertSame('@Core23Shariff/Block/block_shariff.html.twig', $this->templating->view);
 
         $this->assertSame($blockContext, $this->templating->parameters['context']);
         $this->assertInternalType('array', $this->templating->parameters['settings']);

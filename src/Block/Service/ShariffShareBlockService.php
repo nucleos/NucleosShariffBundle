@@ -112,7 +112,7 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
             'orientation'    => 'horizontal',
             'flattrUser'     => null,
             'flattrCategory' => null,
-            'template'       => 'Core23ShariffBundle:Block:block_shariff.html.twig',
+            'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
         ]);
     }
 
