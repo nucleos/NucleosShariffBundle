@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="core23.shariff.block.share">
+        <source>core23.shariff.block.share</source>
+        <target>Shariff - Social Sharing</target>
+      </trans-unit>
+      <trans-unit id="form.choice_addthis">
+        <source>form.choice_addthis</source>
+        <target>AddThis</target>
+      </trans-unit>
+      <trans-unit id="form.choice_facebook">
+        <source>form.choice_facebook</source>
+        <target>Facebook</target>
+      </trans-unit>
+      <trans-unit id="form.choice_flattr">
+        <source>form.choice_flattr</source>
+        <target>flattr</target>
+      </trans-unit>
+      <trans-unit id="form.choice_googleplus">
+        <source>form.choice_googleplus</source>
+        <target>google+</target>
+      </trans-unit>
+      <trans-unit id="form.choice_horizontal">
+        <source>form.choice_horizontal</source>
+        <target>Horizontal</target>
+      </trans-unit>
+      <trans-unit id="form.choice_linkedin">
+        <source>form.choice_linkedin</source>
+        <target>LinkedIn</target>
+      </trans-unit>
+      <trans-unit id="form.choice_mail">
+        <source>form.choice_mail</source>
+        <target>E-Mail</target>
+      </trans-unit>
+      <trans-unit id="form.choice_pinterest">
+        <source>form.choice_pinterest</source>
+        <target>Pinterest</target>
+      </trans-unit>
+      <trans-unit id="form.choice_reddit">
+        <source>form.choice_reddit</source>
+        <target>Reddit</target>
+      </trans-unit>
+      <trans-unit id="form.choice_stumbleupon">
+        <source>form.choice_stumbleupon</source>
+        <target>StumbleUpon</target>
+      </trans-unit>
+      <trans-unit id=".a0ZQ4D" resname="form.choice_twitter">
+        <source>form.choice_twitter</source>
+        <target>Twitter</target>
+      </trans-unit>
+      <trans-unit id="form.choice_vertical">
+        <source>form.choice_vertical</source>
+        <target>Vertikal</target>
+      </trans-unit>
+      <trans-unit id="form.label_class">
+        <source>form.label_class</source>
+        <target>CSS Klasse</target>
+      </trans-unit>
+      <trans-unit id="form.label_flattr_category">
+        <source>form.label_flattr_category</source>
+        <target>flattr Kategorie</target>
+      </trans-unit>
+      <trans-unit id="form.label_flattr_user">
+        <source>form.label_flattr_user</source>
+        <target>flattr Benutzername</target>
+      </trans-unit>
+      <trans-unit id="form.label_id">
+        <source>form.label_id</source>
+        <target>ID</target>
+      </trans-unit>
+      <trans-unit id="KMlS.ch" resname="form.label_orientation">
+        <source>form.label_orientation</source>
+        <target>Ausrichtung</target>
+      </trans-unit>
+      <trans-unit id="form.label_services">
+        <source>form.label_services</source>
+        <target>Dienste</target>
+      </trans-unit>
+      <trans-unit id="form.label_theme">
+        <source>form.label_theme</source>
+        <target>Theme</target>
+      </trans-unit>
+      <trans-unit id="form.label_title">
+        <source>form.label_title</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="1kSuG.g" resname="form.label_url">
+        <source>form.label_url</source>
+        <target>URL</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
