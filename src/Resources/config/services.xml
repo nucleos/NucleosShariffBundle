@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-  <parameters>
-    <parameter key="core23_shariff.cache.class">Core23\ShariffBundle\Cache\DoctrineCache</parameter>
-    <parameter key="core23_shariff.backend.manager.class">Core23\ShariffBundle\Backend\BackendManager</parameter>
-  </parameters>
   <services>
-    <service id="core23_shariff.backend.manager" class="%core23_shariff.backend.manager.class%">
+    <service id="core23_shariff.backend.manager" class="Core23\ShariffBundle\Backend\BackendManager">
       <argument type="service" id="core23_shariff.cache"/>
       <argument>%core23_shariff.options%</argument>
       <call method="setLogger">
         <argument type="service" id="logger"/>
       </call>
     </service>
-    <service id="core23_shariff.cache" class="%core23_shariff.cache.class%">
+    <service id="core23_shariff.cache" class="Core23\ShariffBundle\Cache\DoctrineCache">
       <argument type="service" id="doctrine_cache.providers.core23_shariff" on-invalid="ignore"/>
     </service>
   </services>
