@@ -5,8 +5,8 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="core23.shariff.block.share">
-        <source>core23.shariff.block.share</source>
+      <trans-unit id="core23_shariff.block.share">
+        <source>core23_shariff.block.share</source>
         <target>Shariff - Social Sharing</target>
       </trans-unit>
       <trans-unit id="form.choice_addthis">

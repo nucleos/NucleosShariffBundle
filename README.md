@@ -49,7 +49,7 @@ core23_shariff:
 ```twig
 {# template.twig #}
 
-{{ sonata_block_render({ 'type': 'core23.shariff.block.share' }, {
+{{ sonata_block_render({ 'type': 'core23_shariff.block.share' }, {
     'url': 'https://example.com/site.html'
 }) }}
 ```

@@ -36,6 +36,6 @@ final class BackendController extends Controller
      */
     private function getBackendManager(): BackendManager
     {
-        return $this->get('core23.shariff.backend.manager');
+        return $this->get('core23_shariff.backend.manager');
     }
 }
