@@ -14,7 +14,7 @@ namespace Core23\ShariffBundle\Tests\DependencyInjection;
 use Core23\ShariffBundle\DependencyInjection\Core23ShariffExtension;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 
-class Core23ShariffExtensionTest extends AbstractExtensionTestCase
+final class Core23ShariffExtensionTest extends AbstractExtensionTestCase
 {
     public function testLoadDefault(): void
     {

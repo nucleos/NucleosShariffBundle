@@ -17,7 +17,7 @@ use Sonata\BlockBundle\Model\Block;
 use Sonata\BlockBundle\Model\BlockInterface;
 use Sonata\BlockBundle\Test\AbstractBlockServiceTestCase;
 
-class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
+final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
 {
     public function testDefaultSettings(): void
     {

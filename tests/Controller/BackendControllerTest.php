@@ -14,7 +14,7 @@ namespace Core23\ShariffBundle\Tests\Controller;
 use Core23\ShariffBundle\Controller\BackendController;
 use PHPUnit\Framework\TestCase;
 
-class BackendControllerTest extends TestCase
+final class BackendControllerTest extends TestCase
 {
     private $controller;
 
