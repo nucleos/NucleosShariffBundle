@@ -77,6 +77,15 @@ core23_shariff:
             secret: GENERATEDSECRET
 ```
 
+Add the block to the `sonata_block` configuration if necessary:
+
+```yaml
+sonata_block:
+    blocks:
+        ...
+        core23_shariff.block.share: ~
+```
+
 See [shariff-php] for a list of all available services.
 
 This bundle is available under the [MIT license](LICENSE.md).
