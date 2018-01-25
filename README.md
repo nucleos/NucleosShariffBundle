@@ -49,7 +49,7 @@ core23_shariff:
 ```twig
 {# template.twig #}
 
-{{ sonata_block_render({ 'type': 'core23_shariff.block.share' }, {
+{{ sonata_block_render({ 'type': 'core23.shariff.block.share' }, {
     'url': 'https://example.com/site.html'
 }) }}
 ```
@@ -75,6 +75,15 @@ core23_shariff:
         facebook:
             app_id: 1234567890
             secret: GENERATEDSECRET
+```
+
+Add the block to the `sonata_block` configuration if necessary:
+
+```yaml
+sonata_block:
+    blocks:
+        ...
+        core23.shariff.block.share: ~
 ```
 
 See [shariff-php] for a list of all available services.
