@@ -17,7 +17,7 @@ This bundle provides a wrapper for using [shariff] inside the symfony sonata-pro
 ### Installation
 
 ```
-php composer.phar require core23/shariff-bundle
+composer require core23/shariff-bundle
 ```
 
 ### Enabling the bundle
