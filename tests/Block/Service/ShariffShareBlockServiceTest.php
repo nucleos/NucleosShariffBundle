@@ -26,7 +26,7 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
 
         $this->assertSettings([
             'url'            => null,
-            'class'          => '',
+            'class'          => null,
             'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
@@ -42,7 +42,7 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
 
         $blockContext = new BlockContext($block, [
             'url'            => null,
-            'class'          => '',
+            'class'          => null,
             'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',

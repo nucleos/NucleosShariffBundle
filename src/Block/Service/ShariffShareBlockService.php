@@ -78,6 +78,7 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
                         'grey'     => 'grey',
                         'white'    => 'white',
                     ],
+                    'choice_translation_domain' => false,
                 ]],
                 ['orientation', ChoiceType::class, [
                     'label'   => 'form.label_orientation',
@@ -106,7 +107,7 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
     {
         $resolver->setDefaults([
             'url'            => null,
-            'class'          => '',
+            'class'          => null,
             'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
