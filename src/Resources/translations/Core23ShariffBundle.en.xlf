@@ -49,7 +49,7 @@
         <source>form.choice_stumbleupon</source>
         <target>StumbleUpon</target>
       </trans-unit>
-      <trans-unit id=".a0ZQ4D" resname="form.choice_twitter">
+      <trans-unit id="form.choice_twitter">
         <source>form.choice_twitter</source>
         <target>Twitter</target>
       </trans-unit>
@@ -73,7 +73,7 @@
         <source>form.label_id</source>
         <target>ID</target>
       </trans-unit>
-      <trans-unit id="KMlS.ch" resname="form.label_orientation">
+      <trans-unit id="form.label_orientation">
         <source>form.label_orientation</source>
         <target>Orientation</target>
       </trans-unit>
@@ -89,7 +89,7 @@
         <source>form.label_title</source>
         <target>Title</target>
       </trans-unit>
-      <trans-unit id="1kSuG.g" resname="form.label_url">
+      <trans-unit id="form.label_url">
         <source>form.label_url</source>
         <target>URL</target>
       </trans-unit>
