@@ -3,6 +3,6 @@
   "homepage": "http://ni-ju-san.de/",
   "author": "Christian Gripp <mail@core23.de>",
   "dependencies": {
-    "shariff": "^1.24"
+    "shariff": "^3.0"
   }
 }
