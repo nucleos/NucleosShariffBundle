@@ -29,7 +29,7 @@ final class BackendManager extends BaseBackendManager
         $client         = new Client();
         $serviceFactory = new ServiceFactory($client);
 
-        $baseCacheKey = md5(json_encode($options));
+        $baseCacheKey = md5(json_encode($options) ?: '');
         $services     = $serviceFactory->getServicesByName($options['services'], $options);
         $domains      = $options['domains'];
 
