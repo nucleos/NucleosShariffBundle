@@ -24,6 +24,7 @@
     ],
     "require": {
         "php": "^7.1",
+        "ext-json": "*",
         "doctrine/doctrine-cache-bundle": "^1.0",
         "guzzlehttp/guzzle": "^5.0 || ^6.0",
         "heise/shariff": "^7.0",
