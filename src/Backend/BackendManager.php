@@ -19,8 +19,6 @@ use Heise\Shariff\CacheInterface;
 final class BackendManager extends BaseBackendManager
 {
     /**
-     * BackendManager constructor.
-     *
      * @param CacheInterface $cache
      * @param array          $options
      */

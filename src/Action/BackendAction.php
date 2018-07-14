@@ -23,8 +23,6 @@ final class BackendAction
     private $backend;
 
     /**
-     * BackendAction constructor.
-     *
      * @param BackendManager $backend
      */
     public function __construct(BackendManager $backend)
