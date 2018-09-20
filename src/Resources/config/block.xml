@@ -4,7 +4,7 @@
     <service id="core23_shariff.block.share" class="Core23\ShariffBundle\Block\Service\ShariffShareBlockService">
       <tag name="sonata.block"/>
       <argument>core23_shariff.block.share</argument>
-      <argument type="service" id="templating"/>
+      <argument type="service" id="sonata.templating"/>
     </service>
   </services>
 </container>
