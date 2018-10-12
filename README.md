@@ -41,7 +41,7 @@ return [
 Create a configuration file called `core23_shariff.yaml`:
 
 ```yaml
-# app/config/routes/core23_shariff.yaml
+# config/routes/core23_shariff.yaml
 
 core23_shariff:
     resource: "@Core23ShariffBundle/Resources/config/routing/backend.yml"
