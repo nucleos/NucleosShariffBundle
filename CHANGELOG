@@ -1,3 +1,10 @@
+02/11/2018 08:11  3.0.1  Autowiring
+2c530c9 Removed old config path from docs
+db44d50 Removed donation from README
+5b680ff Added service aliases for autowiring
+b0f86cd Changed branch alias to 3.x
+9c9dfa2 Updated release config
+872fed8 Updated style config
 29/09/2018 08:12  3.0.0  Use action pattern instead of controller
 a93fd5b Added missing dependencies
 0f1a466 Removed templating dependency
