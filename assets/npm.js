@@ -1,3 +1,3 @@
 import 'shariff';
 
-import 'shariff/dist/shariff.complete.css'
+import 'shariff/dist/shariff.complete.css';
