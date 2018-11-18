@@ -120,26 +120,6 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
     /**
      * {@inheritdoc}
      */
-    public function getJavascripts($media)
-    {
-        return [
-            '/assets/javascript/shariff.js',
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getStylesheets($media)
-    {
-        return [
-            '/assets/stylesheet/shariff.css',
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getBlockMetadata($code = null)
     {
         return new Metadata($this->getName(), $code ?? $this->getName(), false, 'Core23ShariffBundle', [
