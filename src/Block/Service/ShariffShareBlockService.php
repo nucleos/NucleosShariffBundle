@@ -122,7 +122,7 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
      */
     public function getBlockMetadata($code = null)
     {
-        return new Metadata($this->getName(), $code ?? $this->getName(), false, 'Core23ShariffBundle', [
+        return new Metadata($this->getName(), $code ?? $this->getName(), null, 'Core23ShariffBundle', [
             'class' => 'fa fa-share-square-o',
         ]);
     }
