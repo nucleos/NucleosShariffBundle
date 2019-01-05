@@ -47,7 +47,7 @@ final class Core23ShariffExtensionTest extends AbstractExtensionTestCase
         ]);
     }
 
-    protected function getContainerExtensions(): array
+    protected function getContainerExtensions()
     {
         return [
             new Core23ShariffExtension(),
