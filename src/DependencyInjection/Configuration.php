@@ -25,7 +25,7 @@ final class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder('core23_shariff');
 
         // Keep compatibility with symfony/config < 4.2
-        if (!\method_exists($treeBuilder, 'getRootNode')) {
+        if (!method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->root('core23_shariff');
         } else {
             $rootNode = $treeBuilder->getRootNode();
