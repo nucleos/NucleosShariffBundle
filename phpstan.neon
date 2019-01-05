@@ -10,5 +10,5 @@ parameters:
 
     ignoreErrors:
         # Symfony DI
-        - '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\).#'
+        - '#Cannot call method end\(\) on Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface\|null.#'
 
