@@ -28,7 +28,7 @@
         "doctrine/cache": "^1.7",
         "doctrine/doctrine-cache-bundle": "^1.0",
         "guzzlehttp/guzzle": "^5.0 || ^6.0",
-        "heise/shariff": "^7.0",
+        "heise/shariff": "^8.0",
         "sonata-project/admin-bundle": "^3.35",
         "sonata-project/block-bundle": "^3.13",
         "sonata-project/core-bundle": "^3.13.5",
