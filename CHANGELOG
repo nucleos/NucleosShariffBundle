@@ -1,3 +1,35 @@
+17/03/2019 16:21  4.0.0  Refactored asset management
+832e684 [BUILD] Added weak_vendors when calling phpunit
+9cb0544 [PATCH] Updated CS Fixer config and run
+1d2ebb6 [MINOR] Require latest shariff version
+e81d646 [BUILD] Updated phpstan version
+64c4e9a [BUILD] Fixed symfony test setup
+bbb9b36 [MINOR] Removed support for outdated symfony versions
+85a2fb2 Updated cs-fixer config
+22f8d21 Use return types
+70525ee Fixed phpstan errors
+c4f0a02 Fixed CS
+84d5fff Fixed missing import
+0d53075 Fixed phpunit config for release command
+4fbc248 Use asserts for type safe root config nodes
+c65c3c5 Removed deprecation warnings
+5184cae Removed deprecation warnings
+8d57c66 Fixed wrong parameter type for Metadata
+65dfbe3 Added platform workaround for php-cs-fixer tool
+40ab0c8 Require latest phpunit bridge
+ebd8107 Added platform workaround for php-cs-fixer tool
+e36c34e Removed sonata core-bundle dependency
+c4eb401 Removed sonata core-bundle dependency
+8fed937 Require latest phpunit bridge
+e80202b Removed deprecation warnings
+e1d1aa0 Travis: Test against PHP 7.3
+836212b Revert: Dropped support for PHP 7.1
+634e8e4 Dropped support for PHP 7.1
+d87e60a Fixed CS
+ab8f782 Fixed syntax error in editorconfig
+83d1121 Moved test dependencies to vendor-bin
+556c6b3 Moved assets outside the src dir
+d589dcc Updated homepage url in meta file
 02/11/2018 08:11  3.0.1  Autowiring
 2c530c9 Removed old config path from docs
 db44d50 Removed donation from README
