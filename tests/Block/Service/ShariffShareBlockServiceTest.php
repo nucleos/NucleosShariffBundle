@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Core23\ShariffBundle\Tests\Block\Service;
 
 use Core23\ShariffBundle\Block\Service\ShariffShareBlockService;
+use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Model\Block;
 use Sonata\BlockBundle\Model\BlockInterface;
@@ -59,5 +60,17 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
         $this->assertSame($blockContext, $this->templating->parameters['context']);
         $this->assertInternalType('array', $this->templating->parameters['settings']);
         $this->assertInstanceOf(BlockInterface::class, $this->templating->parameters['block']);
+    }
+
+    public function testBuildEditForm(): void
+    {
+        $blockService = new ShariffShareBlockService('block.service', $this->templating);
+
+        $block = new Block();
+
+        $formMapper = $this->createMock(FormMapper::class);
+        $formMapper->expects($this->once())->method('add');
+
+        $blockService->buildEditForm($formMapper, $block);
     }
 }
