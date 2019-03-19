@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Core23\ShariffBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
+use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -32,7 +33,18 @@ final class Configuration implements ConfigurationInterface
         }
         \assert($rootNode instanceof ArrayNodeDefinition);
 
-        $rootNode
+        $this->addOptions($rootNode);
+        $this->addServices($rootNode);
+
+        return $treeBuilder;
+    }
+
+    /**
+     * @param NodeDefinition $node
+     */
+    private function addOptions(NodeDefinition $node): void
+    {
+        $node
             ->children()
                 ->arrayNode('options')
                     ->fixXmlConfig('domain')
@@ -49,6 +61,17 @@ final class Configuration implements ConfigurationInterface
                         ->end()
                     ->end()
                 ->end()
+            ->end()
+            ;
+    }
+
+    /**
+     * @param NodeDefinition $node
+     */
+    private function addServices(NodeDefinition $node): void
+    {
+        $node
+            ->children()
                 ->arrayNode('services')
                     ->children()
                         ->arrayNode('facebook')
@@ -59,8 +82,6 @@ final class Configuration implements ConfigurationInterface
                     ->end()
                 ->end()
             ->end()
-        ;
-
-        return $treeBuilder;
+            ;
     }
 }
