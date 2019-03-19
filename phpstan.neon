@@ -13,5 +13,5 @@ parameters:
         - '#Parameter \#1 \$formMapper of method Core23\\ShariffBundle\\Block\\Service\\ShariffShareBlockService::buildEditForm\(\) expects Sonata\\AdminBundle\\Form\\FormMapper, PHPUnit\\Framework\\MockObject\\MockObject given.#'
 
         # Symfony DI
-        - '#Cannot call method end\(\) on Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface\|null.#'
+        - '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\).#'
 
