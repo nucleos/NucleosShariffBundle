@@ -62,6 +62,22 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
         $this->assertInstanceOf(BlockInterface::class, $this->templating->parameters['block']);
     }
 
+    public function testGetBlockMetadata(): void
+    {
+        $blockService = new ShariffShareBlockService('block.service', $this->templating);
+
+        $metadata = $blockService->getBlockMetadata('description');
+
+        $this->assertSame('block.service', $metadata->getTitle());
+        $this->assertSame('description', $metadata->getDescription());
+        $this->assertNotNull($metadata->getImage());
+        $this->assertStringStartsWith('data:image/png;base64,', $metadata->getImage() ?? '');
+        $this->assertSame('Core23ShariffBundle', $metadata->getDomain());
+        $this->assertSame([
+            'class' => 'fa fa-share-square-o',
+        ], $metadata->getOptions());
+    }
+
     public function testBuildEditForm(): void
     {
         $blockService = new ShariffShareBlockService('block.service', $this->templating);
