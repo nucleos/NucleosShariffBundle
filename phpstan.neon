@@ -1,17 +1,13 @@
+includes:
+    - vendor-bin/phpstan/vendor/jangregor/phpstan-prophecy/src/extension.neon
+    - vendor-bin/phpstan/vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor-bin/phpstan/vendor/phpstan/phpstan-phpunit/rules.neon
+
 parameters:
     autoload_files:
         - vendor-bin/test/vendor/autoload.php
 
-    includes:
-        - vendor-bin/phpstan/vendor/phpstan/phpstan-deprecation-rules/rules.neon
-        - vendor-bin/phpstan/vendor/phpstan/phpstan-phpunit/extension.neon
-        - vendor-bin/phpstan/vendor/phpstan/phpstan-phpunit/rules.neon
-        - vendor-bin/phpstan/vendor/phpstan/phpstan-strict-rules/rules.neon
-
     ignoreErrors:
-        # PHPUnit
-        - '#Parameter \#1 \$formMapper of method Core23\\ShariffBundle\\Block\\Service\\ShariffShareBlockService::buildEditForm\(\) expects Sonata\\AdminBundle\\Form\\FormMapper, PHPUnit\\Framework\\MockObject\\MockObject given.#'
-
         # Symfony DI
         - '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\).#'
 
