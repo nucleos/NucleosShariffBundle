@@ -55,11 +55,11 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
         $blockService = new ShariffShareBlockService('block.service', $this->templating);
         $blockService->execute($blockContext);
 
-        $this->assertSame('@Core23Shariff/Block/block_shariff.html.twig', $this->templating->view);
+        static::assertSame('@Core23Shariff/Block/block_shariff.html.twig', $this->templating->view);
 
-        $this->assertSame($blockContext, $this->templating->parameters['context']);
-        $this->assertInternalType('array', $this->templating->parameters['settings']);
-        $this->assertInstanceOf(BlockInterface::class, $this->templating->parameters['block']);
+        static::assertSame($blockContext, $this->templating->parameters['context']);
+        static::assertInternalType('array', $this->templating->parameters['settings']);
+        static::assertInstanceOf(BlockInterface::class, $this->templating->parameters['block']);
     }
 
     public function testGetBlockMetadata(): void
@@ -68,12 +68,12 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
 
         $metadata = $blockService->getBlockMetadata('description');
 
-        $this->assertSame('block.service', $metadata->getTitle());
-        $this->assertSame('description', $metadata->getDescription());
-        $this->assertNotNull($metadata->getImage());
-        $this->assertStringStartsWith('data:image/png;base64,', $metadata->getImage() ?? '');
-        $this->assertSame('Core23ShariffBundle', $metadata->getDomain());
-        $this->assertSame([
+        static::assertSame('block.service', $metadata->getTitle());
+        static::assertSame('description', $metadata->getDescription());
+        static::assertNotNull($metadata->getImage());
+        static::assertStringStartsWith('data:image/png;base64,', $metadata->getImage() ?? '');
+        static::assertSame('Core23ShariffBundle', $metadata->getDomain());
+        static::assertSame([
             'class' => 'fa fa-share-square-o',
         ], $metadata->getOptions());
     }
@@ -85,7 +85,7 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
         $block = new Block();
 
         $formMapper = $this->createMock(FormMapper::class);
-        $formMapper->expects($this->once())->method('add');
+        $formMapper->expects(static::once())->method('add');
 
         $blockService->buildEditForm($formMapper, $block);
     }
