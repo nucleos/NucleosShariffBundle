@@ -22,19 +22,11 @@ final class BackendAction
      */
     private $backend;
 
-    /**
-     * @param BackendManager $backend
-     */
     public function __construct(BackendManager $backend)
     {
         $this->backend = $backend;
     }
 
-    /**
-     * @param Request $request
-     *
-     * @return JsonResponse
-     */
     public function __invoke(Request $request): JsonResponse
     {
         $url    = $request->get('url');

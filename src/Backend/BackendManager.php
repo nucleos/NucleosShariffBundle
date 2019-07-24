@@ -18,10 +18,6 @@ use Heise\Shariff\CacheInterface;
 
 final class BackendManager extends BaseBackendManager
 {
-    /**
-     * @param CacheInterface $cache
-     * @param array          $options
-     */
     public function __construct(CacheInterface $cache, array $options)
     {
         $client         = new Client();

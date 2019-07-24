@@ -21,9 +21,6 @@ final class DoctrineCache implements CacheInterface
      */
     private $cache;
 
-    /**
-     * @param Cache $cache
-     */
     public function __construct(Cache $cache)
     {
         $this->cache = $cache;
@@ -44,8 +41,6 @@ final class DoctrineCache implements CacheInterface
      * Get cache entry.
      *
      * @param string $key
-     *
-     * @return string
      */
     public function getItem($key): string
     {
@@ -56,8 +51,6 @@ final class DoctrineCache implements CacheInterface
      * Check if cache entry exists.
      *
      * @param string $key
-     *
-     * @return bool
      */
     public function hasItem($key): bool
     {

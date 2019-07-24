@@ -39,9 +39,6 @@ final class Configuration implements ConfigurationInterface
         return $treeBuilder;
     }
 
-    /**
-     * @param NodeDefinition $node
-     */
     private function addOptions(NodeDefinition $node): void
     {
         $node
@@ -65,9 +62,6 @@ final class Configuration implements ConfigurationInterface
             ;
     }
 
-    /**
-     * @param NodeDefinition $node
-     */
     private function addServices(NodeDefinition $node): void
     {
         $node
