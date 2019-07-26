@@ -24,9 +24,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 final class ShariffShareBlockService extends AbstractAdminBlockService
 {
-    /**
-     * {@inheritdoc}
-     */
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
         $parameters = [
@@ -38,9 +35,6 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
         return $this->renderResponse($blockContext->getTemplate(), $parameters, $response);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function buildEditForm(FormMapper $formMapper, BlockInterface $block): void
     {
         $formMapper->add('settings', ImmutableArrayType::class, [
@@ -100,9 +94,6 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
         ]);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function configureSettings(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
@@ -117,9 +108,6 @@ final class ShariffShareBlockService extends AbstractAdminBlockService
         ]);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getBlockMetadata($code = null)
     {
         return new Metadata($this->getName(), $code ?? $this->getName(), null, 'Core23ShariffBundle', [
