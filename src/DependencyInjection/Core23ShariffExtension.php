@@ -30,7 +30,9 @@ final class Core23ShariffExtension extends Extension
 
         $options = $config['options'];
 
-        if (empty($config['services']['facebook']['app_id']) || empty($config['services']['facebook']['secret'])) {
+        if (!isset($config['services']['facebook']['app_id'], $config['services']['facebook']['secret']) ||
+            null === $config['services']['facebook']['app_id'] ||
+            null === $config['services']['facebook']['secret']) {
             $options['services'] = array_values(array_diff($options['services'], ['Facebook']));
         } else {
             $options['Facebook'] = $config['services']['facebook'];
