@@ -30,7 +30,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "heise/shariff": "^8.0",
         "sonata-project/admin-bundle": "^3.48",
-        "sonata-project/block-bundle": "^3.15",
+        "sonata-project/block-bundle": "^3.16.1",
         "sonata-project/core-bundle": "^3.17",
         "symfony/config": "^3.4 || ^4.2",
         "symfony/dependency-injection": "^3.4 || ^4.2",
