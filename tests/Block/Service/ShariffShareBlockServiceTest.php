@@ -18,7 +18,7 @@ use Sonata\BlockBundle\Model\Block;
 use Sonata\BlockBundle\Model\BlockInterface;
 use Sonata\BlockBundle\Test\BlockServiceTestCase;
 
-final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
+final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 {
     public function testDefaultSettings(): void
     {
@@ -58,7 +58,7 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
         static::assertSame('@Core23Shariff/Block/block_shariff.html.twig', $this->templating->view);
 
         static::assertSame($blockContext, $this->templating->parameters['context']);
-        static::assertInternalType('array', $this->templating->parameters['settings']);
+        static::assertIsArray($this->templating->parameters['settings']);
         static::assertInstanceOf(BlockInterface::class, $this->templating->parameters['block']);
     }
 
@@ -69,7 +69,6 @@ final class ShariffShareBlockServiceTest extends AbstractBlockServiceTestCase
         $metadata = $blockService->getMetadata();
 
         static::assertSame('block.service', $metadata->getTitle());
-        static::assertSame('description', $metadata->getDescription());
         static::assertNotNull($metadata->getImage());
         static::assertStringStartsWith('data:image/png;base64,', $metadata->getImage() ?? '');
         static::assertSame('Core23ShariffBundle', $metadata->getDomain());
