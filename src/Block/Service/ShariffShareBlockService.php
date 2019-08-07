@@ -122,8 +122,13 @@ final class ShariffShareBlockService extends AbstractBlockService implements Edi
 
     public function getMetadata(): MetadataInterface
     {
-        return new Metadata($this->getName(), null, null, 'Core23ShariffBundle', [
+        return new Metadata('core23_shariff.block.share', null, null, 'Core23ShariffBundle', [
             'class' => 'fa fa-share-square-o',
         ]);
+    }
+
+    public function getName(): string
+    {
+        return $this->getMetadata()->getTitle();
     }
 }

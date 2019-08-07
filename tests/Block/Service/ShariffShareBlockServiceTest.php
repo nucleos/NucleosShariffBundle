@@ -22,7 +22,7 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 {
     public function testDefaultSettings(): void
     {
-        $blockService = new ShariffShareBlockService('block.service', $this->templating);
+        $blockService = new ShariffShareBlockService($this->templating);
         $blockContext = $this->getBlockContext($blockService);
 
         $this->assertSettings([
@@ -52,7 +52,7 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
             'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
         ]);
 
-        $blockService = new ShariffShareBlockService('block.service', $this->templating);
+        $blockService = new ShariffShareBlockService($this->templating);
         $blockService->execute($blockContext);
 
         static::assertSame('@Core23Shariff/Block/block_shariff.html.twig', $this->templating->view);
@@ -64,11 +64,11 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 
     public function testGetMetadata(): void
     {
-        $blockService = new ShariffShareBlockService('block.service', $this->templating);
+        $blockService = new ShariffShareBlockService($this->templating);
 
         $metadata = $blockService->getMetadata();
 
-        static::assertSame('block.service', $metadata->getTitle());
+        static::assertSame('core23_shariff.block.share', $metadata->getTitle());
         static::assertNotNull($metadata->getImage());
         static::assertStringStartsWith('data:image/png;base64,', $metadata->getImage() ?? '');
         static::assertSame('Core23ShariffBundle', $metadata->getDomain());
@@ -79,7 +79,7 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 
     public function testConfigureEditForm(): void
     {
-        $blockService = new ShariffShareBlockService('block.service', $this->templating);
+        $blockService = new ShariffShareBlockService($this->templating);
 
         $block = new Block();
 
