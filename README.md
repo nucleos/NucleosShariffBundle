@@ -62,16 +62,6 @@ core23_shariff:
     resource: "@Core23ShariffBundle/Resources/config/routing/backend.yml"
 ```
 
-Add the block to the `sonata_block` configuration if necessary:
-
-```yaml
-# config/packages/sonata_block.yaml
-
-sonata_block:
-    blocks:
-        core23_shariff.block.share: ~
-```
-
 Create a configuration file called `doctrine_cache.yaml`:
 
 ```yaml

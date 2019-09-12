@@ -69,8 +69,7 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
         $metadata = $blockService->getMetadata();
 
         static::assertSame('core23_shariff.block.share', $metadata->getTitle());
-        static::assertNotNull($metadata->getImage());
-        static::assertStringStartsWith('data:image/png;base64,', $metadata->getImage() ?? '');
+        static::assertNull($metadata->getImage());
         static::assertSame('Core23ShariffBundle', $metadata->getDomain());
         static::assertSame([
             'class' => 'fa fa-share-square-o',
