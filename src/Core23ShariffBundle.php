@@ -11,8 +11,14 @@ declare(strict_types=1);
 
 namespace Core23\ShariffBundle;
 
+use Core23\ShariffBundle\DependencyInjection\Compiler\ShariffCompilerPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class Core23ShariffBundle extends Bundle
 {
+    public function build(ContainerBuilder $container): void
+    {
+        $container->addCompilerPass(new ShariffCompilerPass());
+    }
 }

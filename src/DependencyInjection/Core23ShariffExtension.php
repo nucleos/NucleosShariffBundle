@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Core23\ShariffBundle\DependencyInjection;
 
+use Core23\ShariffBundle\Service\Facebook;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
@@ -28,16 +29,43 @@ final class Core23ShariffExtension extends Extension
         $loader->load('block.xml');
         $loader->load('services.xml');
 
-        $options = $config['options'];
+        $this->configureAliases($container, $config);
+        $this->configureDomains($container, $config);
+        $this->configureServices($container, $config);
+    }
 
-        if (!isset($config['services']['facebook']['app_id'], $config['services']['facebook']['secret']) ||
-            null === $config['services']['facebook']['app_id'] ||
-            null === $config['services']['facebook']['secret']) {
-            $options['services'] = array_values(array_diff($options['services'], ['Facebook']));
+    private function configureServices(ContainerBuilder $container, array $config): void
+    {
+        $services = $config['options']['services'];
+        $facebook = $config['services']['facebook'] ?? null;
+
+        if (
+            !isset($facebook['app_id'], $facebook['secret']) ||
+            null === $facebook['app_id'] || null === $facebook['secret']
+        ) {
+            if (false !== ($key = array_search('facebook', $services, true))) {
+                unset($services[$key]);
+            }
+
+            $container->removeDefinition(Facebook::class);
         } else {
-            $options['Facebook'] = $config['services']['facebook'];
+            $container->setParameter('core23_shariff.service.facebook.app_id', $facebook['app_id']);
+            $container->setParameter('core23_shariff.service.facebook.secret', $facebook['secret']);
+            $container->setParameter('core23_shariff.service.facebook.version', $facebook['version'] ?? null);
         }
 
-        $container->setParameter('core23_shariff.options', $options);
+        $container->setParameter('core23_shariff.services', array_values($services));
+    }
+
+    private function configureAliases(ContainerBuilder $container, array $config): void
+    {
+        $container->setAlias('core23_shariff.cache', $config['cache']);
+        $container->setAlias('core23_shariff.http_client', $config['http_client']);
+        $container->setAlias('core23_shariff.request_factory', $config['request_factory']);
+    }
+
+    private function configureDomains(ContainerBuilder $container, array $config): void
+    {
+        $container->setParameter('core23_shariff.domains', $config['options']['domains']);
     }
 }

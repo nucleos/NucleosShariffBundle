@@ -11,18 +11,18 @@ declare(strict_types=1);
 
 namespace Core23\ShariffBundle\Action;
 
-use Core23\ShariffBundle\Backend\BackendManager;
+use Core23\ShariffBundle\Backend\Backend;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 final class BackendAction
 {
     /**
-     * @var BackendManager
+     * @var Backend
      */
     private $backend;
 
-    public function __construct(BackendManager $backend)
+    public function __construct(Backend $backend)
     {
         $this->backend = $backend;
     }

@@ -36,10 +36,27 @@ return [
 ];
 ```
 
+Define cache, http client and request factory:
+
+```
+# config/routes/core23_shariff.yaml
+
+framework:
+    cache:
+        pools:
+            cache.shariff:
+                adapter: cache.adapter.filesystem
+
+core23_shariff:
+    cache: 'cache.shariff'
+    http_client: 'some.http.client'         # e.g httplug.client
+    request_factory: 'some.request.factory' # e.g. nyholm.psr7.psr17_factory
+```
+
 ### Assets
 
-It is recommended to use [webpack](https://webpack.js.org/) / [webpack-encore](https://github.com/symfony/webpack-encore) 
-to include the `shariff.js` and `shariff.css` file in your page. 
+It is recommended to use [webpack](https://webpack.js.org/) / [webpack-encore](https://github.com/symfony/webpack-encore)
+to include the `shariff.js` and `shariff.css` file in your page.
 
 You can use [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) to load the library:
 
@@ -62,14 +79,15 @@ core23_shariff:
     resource: "@Core23ShariffBundle/Resources/config/routing/backend.yml"
 ```
 
-Create a configuration file called `doctrine_cache.yaml`:
+Create a configuration file called `framework_cache.yaml`:
 
 ```yaml
-doctrine_cache:
-    providers:
-        core23_shariff:
-            type: php_file
-            namespace: core23_shariff
+framework:
+    cache:
+        pools:
+            cache.shariff:
+                adapter: cache.adapter.filesystem
+
 ```
 
 ## Usage
@@ -84,21 +102,26 @@ doctrine_cache:
 
 ### Configure the Bundle
 
-You can globally configure the services that should count the likes or favorites for a page. 
+You can globally configure the services that should count the likes or favorites for a page.
 
 ```yaml
 core23_shariff:
+    cache: 'cache.shariff'
+    http_client: 'some.http.client'
+    request_factory: 'some.request.factory'
+
     options:
         domains: [ ] # Allow specific domains for shariff
-        services: [ 'GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis' ]
+        services: [ 'addthis', 'buffer', 'facebook', 'pinterest', 'reddit', 'stumbleupon', 'vk', 'xing' ]
+
     services:
-        # Optional configuration when using facebook service
         facebook:
-            app_id: "1234567890"
-            secret: "GENERATEDSECRET"
+            app_id:  "1234567890"
+            secret:  "GENERATEDSECRET"
+            version: "5.0"
 ```
 
-See [shariff-php] for a list of all available services.
+This is a fork of [shariff-php] with a more modern and dynamic solution.
 
 ## License
 
