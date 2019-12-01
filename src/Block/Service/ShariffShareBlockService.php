@@ -65,7 +65,6 @@ final class ShariffShareBlockService extends AbstractBlockService implements Edi
                         'form.choice_linkedin'    => 'linkedin',
                         'form.choice_reddit'      => 'reddit',
                         'form.choice_stumbleupon' => 'stumbleupon',
-                        'form.choice_flattr'      => 'flattr',
                         'form.choice_pinterest'   => 'pinterest',
                         'form.choice_xing'        => 'xing',
                         'form.choice_mail'        => 'mail',
@@ -89,14 +88,6 @@ final class ShariffShareBlockService extends AbstractBlockService implements Edi
                         'form.choice_horizontal' => 'horizontal',
                     ],
                 ]],
-                ['flattrUser', TextType::class, [
-                    'label'    => 'form.label_flattr_user',
-                    'required' => false,
-                ]],
-                ['flattrCategory', TextType::class, [
-                    'label'    => 'form.label_flattr_category',
-                    'required' => false,
-                ]],
             ],
             'translation_domain' => 'Core23ShariffBundle',
         ]);
@@ -110,8 +101,6 @@ final class ShariffShareBlockService extends AbstractBlockService implements Edi
             'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
-            'flattrUser'     => null,
-            'flattrCategory' => null,
             'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
         ]);
     }

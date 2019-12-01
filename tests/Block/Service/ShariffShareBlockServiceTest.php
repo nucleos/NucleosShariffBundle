@@ -31,8 +31,6 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
             'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
-            'flattrUser'     => null,
-            'flattrCategory' => null,
             'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
         ], $blockContext);
     }
@@ -47,8 +45,6 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
             'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
-            'flattrUser'     => null,
-            'flattrCategory' => null,
             'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
         ]);
 
