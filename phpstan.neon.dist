@@ -21,3 +21,13 @@ parameters:
             message: "#^Offset 'host' does not exist on array\\(\\)\\|array\\('scheme' \\=\\> string, 'host' \\=\\> string, 'port' \\=\\> int, 'user' \\=\\> string, 'pass' \\=\\> string, 'path' \\=\\> string, 'query' \\=\\> string, 'fragment' \\=\\> string\\)\\.$#"
             count: 1
             path: src/Backend/PsrBackend.php
+
+        -
+            message: "#^Call to function method_exists\\(\\) with 'Symfony\\\\\\\\Component…' and 'getRootNode' will always evaluate to false\\.$#"
+            count: 1
+            path: src/DependencyInjection/Configuration.php
+
+        -
+            message: "#^Call to an undefined method Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\TreeBuilder\\:\\:root\\(\\)\\.$#"
+            count: 1
+            path: src/DependencyInjection/Configuration.php
