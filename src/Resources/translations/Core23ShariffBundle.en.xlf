@@ -17,10 +17,6 @@
         <source>form.choice_facebook</source>
         <target>Facebook</target>
       </trans-unit>
-      <trans-unit id="form.choice_flattr">
-        <source>form.choice_flattr</source>
-        <target>flattr</target>
-      </trans-unit>
       <trans-unit id="form.choice_googleplus">
         <source>form.choice_googleplus</source>
         <target>google+</target>
@@ -60,14 +56,6 @@
       <trans-unit id="form.label_class">
         <source>form.label_class</source>
         <target>CSS Class</target>
-      </trans-unit>
-      <trans-unit id="form.label_flattr_category">
-        <source>form.label_flattr_category</source>
-        <target>flattr category</target>
-      </trans-unit>
-      <trans-unit id="form.label_flattr_user">
-        <source>form.label_flattr_user</source>
-        <target>flattr username</target>
       </trans-unit>
       <trans-unit id="form.label_id">
         <source>form.label_id</source>

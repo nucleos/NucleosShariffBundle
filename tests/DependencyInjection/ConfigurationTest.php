@@ -21,12 +21,19 @@ final class ConfigurationTest extends TestCase
     {
         $processor = new Processor();
 
-        $config = $processor->processConfiguration(new Configuration(), [[]]);
+        $config = $processor->processConfiguration(new Configuration(), [[
+            'cache'           => 'my.cache',
+            'http_client'     => 'my.http_client',
+            'request_factory' => 'my.request_factory',
+        ]]);
 
         $expected = [
-            'options' => [
+            'cache'           => 'my.cache',
+            'http_client'     => 'my.http_client',
+            'request_factory' => 'my.request_factory',
+            'options'         => [
                 'domains'  => [],
-                'services' => ['GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'],
+                'services' => ['addthis', 'buffer', 'facebook', 'pinterest', 'reddit', 'stumbleupon', 'vk', 'xing'],
             ],
         ];
 
@@ -38,14 +45,20 @@ final class ConfigurationTest extends TestCase
         $processor = new Processor();
 
         $config = $processor->processConfiguration(new Configuration(), [[
-            'options' => [
+            'cache'           => 'my.cache',
+            'http_client'     => 'my.http_client',
+            'request_factory' => 'my.request_factory',
+            'options'         => [
                 'domain'  => 'http://foo.bar',
                 'service' => 'GooglePlus',
             ],
         ]]);
 
         $expected = [
-            'options' => [
+            'cache'           => 'my.cache',
+            'http_client'     => 'my.http_client',
+            'request_factory' => 'my.request_factory',
+            'options'         => [
                 'domains'  => ['http://foo.bar'],
                 'services' => ['GooglePlus'],
             ],

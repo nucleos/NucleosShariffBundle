@@ -4,9 +4,9 @@
   "homepage": "https://core23.de",
   "author": "Christian Gripp <mail@core23.de>",
   "dependencies": {
-    "shariff": "^3.0"
+    "shariff": "^3.2"
   },
-  "main": "assets/npm.js",
+  "main": "assets/modules.js",
   "files": [
     "assets/"
   ]

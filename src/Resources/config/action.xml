@@ -3,7 +3,7 @@
   <services>
     <defaults public="true"/>
     <service id="Core23\ShariffBundle\Action\BackendAction">
-      <argument type="service" id="core23_shariff.backend.manager"/>
+      <argument type="service" id="Core23\ShariffBundle\Backend\Backend"/>
     </service>
   </services>
 </container>

@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <services>
-    <service alias="core23_shariff.backend.manager" id="Core23\ShariffBundle\Backend\BackendManager" public="true"/>
-    <service id="core23_shariff.backend.manager" class="Core23\ShariffBundle\Backend\BackendManager">
-      <argument type="service" id="core23_shariff.cache"/>
-      <argument>%core23_shariff.options%</argument>
-      <call method="setLogger">
-        <argument type="service" id="logger"/>
-      </call>
+    <prototype namespace="Core23\ShariffBundle\Service\" resource="../../Service" exclude="../../Service/{Exception}" public="true" autowire="true" autoconfigure="true">
+      <tag name="core23.shariff"/>
+    </prototype>
+    <service id="Core23\ShariffBundle\Service\Facebook" public="true">
+      <tag name="core23.shariff"/>
+      <argument>%core23_shariff.service.facebook.app_id%</argument>
+      <argument>%core23_shariff.service.facebook.secret%</argument>
+      <argument>%core23_shariff.service.facebook.version%</argument>
     </service>
-    <service id="core23_shariff.cache" class="Core23\ShariffBundle\Cache\DoctrineCache">
-      <argument type="service" id="doctrine_cache.providers.core23_shariff" on-invalid="ignore"/>
+    <service id="Core23\ShariffBundle\Manager\ServiceManager" alias="Core23\ShariffBundle\Manager\StaticServiceManager"/>
+    <service id="Core23\ShariffBundle\Manager\StaticServiceManager">
+      <argument type="collection"/>
+      <argument>%core23_shariff.services%</argument>
+    </service>
+    <service id="Core23\ShariffBundle\Backend\Backend" alias="Core23\ShariffBundle\Backend\PsrBackend"/>
+    <service id="Core23\ShariffBundle\Backend\PsrBackend">
+      <argument type="service" id="Core23\ShariffBundle\Manager\ServiceManager"/>
+      <argument type="service" id="core23_shariff.request_factory"/>
+      <argument type="service" id="core23_shariff.http_client"/>
+      <argument type="service" id="core23_shariff.cache"/>
+      <argument>%core23_shariff.domains%</argument>
+      <call method="setLogger">
+        <argument type="service" id="logger" on-invalid="ignore_uninitialized"/>
+      </call>
     </service>
   </services>
 </container>

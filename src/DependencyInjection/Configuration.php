@@ -30,10 +30,22 @@ final class Configuration implements ConfigurationInterface
         }
         \assert($rootNode instanceof ArrayNodeDefinition);
 
+        $this->addAliases($rootNode);
         $this->addOptions($rootNode);
         $this->addServices($rootNode);
 
         return $treeBuilder;
+    }
+
+    private function addAliases(NodeDefinition $node): void
+    {
+        $node
+            ->children()
+                ->scalarNode('cache')->isRequired()->end()
+                ->scalarNode('http_client')->isRequired()->end()
+                ->scalarNode('request_factory')->isRequired()->end()
+            ->end()
+            ;
     }
 
     private function addOptions(NodeDefinition $node): void
@@ -50,7 +62,7 @@ final class Configuration implements ConfigurationInterface
                             ->prototype('scalar')->end()
                         ->end()
                         ->arrayNode('services')
-                            ->defaultValue(['GooglePlus', 'Facebook', 'LinkedIn', 'Reddit', 'StumbleUpon', 'Flattr', 'Pinterest', 'Xing', 'AddThis'])
+                            ->defaultValue(['addthis', 'buffer', 'facebook', 'pinterest', 'reddit', 'stumbleupon', 'vk', 'xing'])
                             ->prototype('scalar')->end()
                         ->end()
                     ->end()
@@ -69,6 +81,7 @@ final class Configuration implements ConfigurationInterface
                         ->children()
                             ->scalarNode('app_id')->end()
                             ->scalarNode('secret')->end()
+                            ->scalarNode('version')->end()
                         ->end()
                     ->end()
                 ->end()
