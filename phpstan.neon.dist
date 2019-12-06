@@ -21,3 +21,8 @@ parameters:
             message: "#^Offset 'host' does not exist on array\\(\\)\\|array\\('scheme' \\=\\> string, 'host' \\=\\> string, 'port' \\=\\> int, 'user' \\=\\> string, 'pass' \\=\\> string, 'path' \\=\\> string, 'query' \\=\\> string, 'fragment' \\=\\> string\\)\\.$#"
             count: 1
             path: src/Backend/PsrBackend.php
+
+        -
+            message: "#^Call to an undefined method Twig\\\\Environment::expects\\(\\)\\.$#"
+            count: 1
+            path: tests/Block/Service/ShariffShareBlockServiceTest.php
