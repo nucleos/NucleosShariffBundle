@@ -23,7 +23,7 @@
     }
   ],
   "require": {
-    "php": "^7.2",
+    "php": "^7.3",
     "ext-json": "*",
     "doctrine/doctrine-cache-bundle": "^1.3.5",
     "psr/cache": "^1.0",
