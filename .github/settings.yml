@@ -27,6 +27,9 @@ labels:
   - name: 'feature'
     color: '#0e8a16'
 
+  - name: 'dependency'
+    color: '#5fb2d8'
+
   - name: 'help wanted'
     color: '#159818'
 
