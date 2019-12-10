@@ -8,10 +8,8 @@ ShariffBundle
 [![Monthly Downloads](https://poser.pugx.org/core23/shariff-bundle/d/monthly)](https://packagist.org/packages/core23/shariff-bundle)
 [![Daily Downloads](https://poser.pugx.org/core23/shariff-bundle/d/daily)](https://packagist.org/packages/core23/shariff-bundle)
 
-[![Build Status](https://travis-ci.org/core23/ShariffBundle.svg)](https://travis-ci.org/core23/ShariffBundle)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/core23/ShariffBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/core23/ShariffBundle)
-[![Code Climate](https://codeclimate.com/github/core23/ShariffBundle/badges/gpa.svg)](https://codeclimate.com/github/core23/ShariffBundle)
-[![Coverage Status](https://coveralls.io/repos/core23/ShariffBundle/badge.svg)](https://coveralls.io/r/core23/ShariffBundle)
+[![Continuous Integration](https://github.com/core23/ShariffBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/core23/ShariffBundle/actions)
+[![Code Coverage](https://codecov.io/gh/core23/ShariffBundle/branch/master/graph/badge.svg)](https://codecov.io/gh/core23/ShariffBundle)
 
 This bundle provides a wrapper for using [shariff] inside the symfony sonata-project.
 
