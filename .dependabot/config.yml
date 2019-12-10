@@ -7,11 +7,11 @@ update_configs:
     directory: "/"    
     automerged_updates:
       - match:
-          dependency_type: "development"
+          dependency_type: "all"
     default_assignees:
       - "core23"     
     default_labels:
-      - "security"
+      - "dependency"
     default_reviewers:
       - "core23"     
     update_schedule: "daily"
