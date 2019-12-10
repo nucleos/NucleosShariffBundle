@@ -11,7 +11,7 @@ categories:
   - title: '🐛 Bug Fixes'
     labels:
       - 'bugfix'
-  - title: '🛠 Dependency Updates'
+  - title: '📦 Dependencies'
     labels:
       - 'dependency'
 
