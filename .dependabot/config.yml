@@ -7,7 +7,7 @@ update_configs:
     directory: "/"    
     automerged_updates:
       - match:
-          dependency_type: "all"
+          dependency_type: "development"
     default_assignees:
       - "core23"     
     default_labels:
