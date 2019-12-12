@@ -1,11 +1,12 @@
 # These settings are synced to GitHub by https://probot.github.io/apps/settings/
-_extends: .github
+
+_extends: dev-kit
 
 repository:
-	name: ShariffBundle
-	description: This bundle provides a wrapper for using shariff inside the sonata-project.
-	homepage: https://core23.de
-	topics: symfony, symfony-bundle, bundle, php, shariff, sonata, sonata-block
+  name: ShariffBundle
+  description: This bundle provides a wrapper for using shariff inside the sonata-project.
+  homepage: https://core23.de
+  topics: symfony, symfony-bundle, bundle, php, shariff, sonata, sonata-block
 
 branches:
   - name: master
