@@ -14,6 +14,7 @@ namespace Core23\ShariffBundle\Backend;
 use Core23\ShariffBundle\Manager\ServiceManager;
 use Core23\ShariffBundle\Service\Exception\FetchException;
 use Psr\Cache\CacheItemPoolInterface;
+use Psr\Cache\InvalidArgumentException;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -111,6 +112,9 @@ final class PsrBackend implements Backend, LoggerAwareInterface
         return md5($url);
     }
 
+    /**
+     * @return array<string, int>
+     */
     private function fetchServiceCounters(string $url): array
     {
         $counts = [];
@@ -137,6 +141,11 @@ final class PsrBackend implements Backend, LoggerAwareInterface
         return $counts;
     }
 
+    /**
+     * @param array<string, int> $counts
+     *
+     * @throws InvalidArgumentException
+     */
     private function saveCacheEntry(string $cacheKey, array $counts): void
     {
         $item = $this->cache->getItem($cacheKey);
