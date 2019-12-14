@@ -19,10 +19,14 @@ final class StaticServiceManager implements ServiceManager
     private $services;
 
     /**
-     * @var array
+     * @var string[]
      */
     private $active;
 
+    /**
+     * @param Service[] $services
+     * @param string[]  $active
+     */
     public function __construct(array $services = [], array $active = [])
     {
         $this->services = [];
@@ -56,7 +60,7 @@ final class StaticServiceManager implements ServiceManager
             return $this->getAll();
         }
 
-        return array_filter(array_map(function (string $code) {
+        return array_filter(array_map(function (string $code): ?Service {
             return $this->get($code);
         }, $this->active));
     }
