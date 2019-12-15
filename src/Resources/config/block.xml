@@ -3,7 +3,7 @@
   <services>
     <service id="core23_shariff.block.share" class="Core23\ShariffBundle\Block\Service\ShariffShareBlockService">
       <tag name="sonata.block"/>
-      <argument type="service" id="sonata.templating"/>
+      <argument type="service" id="twig"/>
     </service>
   </services>
 </container>
