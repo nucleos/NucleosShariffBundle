@@ -15,14 +15,14 @@ use Core23\ShariffBundle\Block\Service\ShariffShareBlockService;
 use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Form\Mapper\FormMapper;
 use Sonata\BlockBundle\Model\Block;
-use Sonata\BlockBundle\Model\BlockInterface;
 use Sonata\BlockBundle\Test\BlockServiceTestCase;
+use Symfony\Component\HttpFoundation\Response;
 
 final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 {
     public function testDefaultSettings(): void
     {
-        $blockService = new ShariffShareBlockService($this->templating);
+        $blockService = new ShariffShareBlockService($this->twig);
         $blockContext = $this->getBlockContext($blockService);
 
         $this->assertSettings([
@@ -39,28 +39,41 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
     {
         $block = new Block();
 
-        $blockContext = new BlockContext($block, [
-            'url'            => null,
-            'class'          => null,
-            'services'       => ['twitter', 'facebook', 'googleplus'],
-            'theme'          => 'standard',
-            'orientation'    => 'horizontal',
-            'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
-        ]);
+        $blockContext = new BlockContext(
+            $block,
+            [
+                'url'         => null,
+                'class'       => null,
+                'services'    => ['twitter', 'facebook', 'googleplus'],
+                'theme'       => 'standard',
+                'orientation' => 'horizontal',
+                'template'    => '@Core23Shariff/Block/block_shariff.html.twig',
+            ]
+        );
 
-        $blockService = new ShariffShareBlockService($this->templating);
-        $blockService->execute($blockContext);
+        $response = new Response();
 
-        static::assertSame('@Core23Shariff/Block/block_shariff.html.twig', $this->templating->view);
+        $this->twig->expects(static::once())->method('render')
+            ->with(
+                '@Core23Shariff/Block/block_shariff.html.twig',
+                [
+                    'context'  => $blockContext,
+                    'settings' => $blockContext->getSettings(),
+                    'block'    => $blockContext->getBlock(),
+                ]
+            )
+            ->willReturn('TWIG_CONTENT')
+        ;
 
-        static::assertSame($blockContext, $this->templating->parameters['context']);
-        static::assertIsArray($this->templating->parameters['settings']);
-        static::assertInstanceOf(BlockInterface::class, $this->templating->parameters['block']);
+        $blockService = new ShariffShareBlockService($this->twig);
+
+        static::assertSame($response, $blockService->execute($blockContext, $response));
+        static::assertSame('TWIG_CONTENT', $response->getContent());
     }
 
     public function testGetMetadata(): void
     {
-        $blockService = new ShariffShareBlockService($this->templating);
+        $blockService = new ShariffShareBlockService($this->twig);
 
         $metadata = $blockService->getMetadata();
 
@@ -74,7 +87,7 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 
     public function testConfigureEditForm(): void
     {
-        $blockService = new ShariffShareBlockService($this->templating);
+        $blockService = new ShariffShareBlockService($this->twig);
 
         $block = new Block();
 

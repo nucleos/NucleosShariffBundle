@@ -19,6 +19,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 final class Core23ShariffExtension extends Extension
 {
+    /**
+     * @param array<mixed> $configs
+     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
@@ -34,6 +37,9 @@ final class Core23ShariffExtension extends Extension
         $this->configureServices($container, $config);
     }
 
+    /**
+     * @param array<mixed> $config
+     */
     private function configureServices(ContainerBuilder $container, array $config): void
     {
         $services = $config['options']['services'];
@@ -57,6 +63,9 @@ final class Core23ShariffExtension extends Extension
         $container->setParameter('core23_shariff.services', array_values($services));
     }
 
+    /**
+     * @param array<mixed> $config
+     */
     private function configureAliases(ContainerBuilder $container, array $config): void
     {
         $container->setAlias('core23_shariff.cache', $config['cache']);
@@ -64,6 +73,9 @@ final class Core23ShariffExtension extends Extension
         $container->setAlias('core23_shariff.request_factory', $config['request_factory']);
     }
 
+    /**
+     * @param array<mixed> $config
+     */
     private function configureDomains(ContainerBuilder $container, array $config): void
     {
         $container->setParameter('core23_shariff.domains', $config['options']['domains']);
