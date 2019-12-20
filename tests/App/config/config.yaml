@@ -1,0 +1,32 @@
+framework:
+    secret: secret
+
+    cache:
+        pools:
+            cache.shariff:
+                adapter: cache.adapter.filesystem
+
+    session:
+        handler_id:  session.handler.native_file
+        save_path:   '%kernel.project_dir%/sessions/%kernel.environment%'
+        cookie_secure: auto
+        cookie_samesite: lax
+
+twig:
+    paths:
+        - '%kernel.project_dir%/templates'
+
+core23_shariff:
+    cache: 'cache.shariff'
+    http_client: 'symfony_http_client'
+    request_factory: 'nyholm.psr7.psr17_factory'
+
+services:
+    _defaults:
+        public: false
+
+    symfony_http_client:
+        class: Symfony\Component\HttpClient\Psr18Client
+
+    nyholm.psr7.psr17_factory:
+        class: Nyholm\Psr7\Factory\Psr17Factory
