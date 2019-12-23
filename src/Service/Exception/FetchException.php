@@ -11,9 +11,10 @@ declare(strict_types=1);
 
 namespace Core23\ShariffBundle\Service\Exception;
 
+use Exception;
 use Psr\Http\Client\ClientExceptionInterface;
 
-class FetchException extends \Exception implements ClientExceptionInterface
+class FetchException extends Exception implements ClientExceptionInterface
 {
     /**
      * @var string|null
