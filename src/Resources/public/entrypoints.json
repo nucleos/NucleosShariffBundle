@@ -1,0 +1,12 @@
+{
+  "entrypoints": {
+    "widget": {
+      "css": [
+        "/bundles/nucleosshariff/widget.css"
+      ],
+      "js": [
+        "/bundles/nucleosshariff/widget.js"
+      ]
+    }
+  }
+}
