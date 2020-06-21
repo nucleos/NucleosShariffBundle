@@ -1,5 +1,5 @@
-ShariffBundle
-=============
+NucleosShariffBundle
+====================
 [![Latest Stable Version](https://poser.pugx.org/nucleos/shariff-bundle/v/stable)](https://packagist.org/packages/nucleos/shariff-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/nucleos/shariff-bundle/v/unstable)](https://packagist.org/packages/nucleos/shariff-bundle)
 [![License](https://poser.pugx.org/nucleos/shariff-bundle/license)](https://packagist.org/packages/nucleos/shariff-bundle)
