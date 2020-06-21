@@ -9,20 +9,20 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Tests\DependencyInjection;
+namespace Nucleos\ShariffBundle\Tests\DependencyInjection;
 
-use Core23\ShariffBundle\DependencyInjection\Core23ShariffExtension;
-use Core23\ShariffBundle\Service\AddThis;
-use Core23\ShariffBundle\Service\Buffer;
-use Core23\ShariffBundle\Service\Facebook;
-use Core23\ShariffBundle\Service\Pinterest;
-use Core23\ShariffBundle\Service\Reddit;
-use Core23\ShariffBundle\Service\StumbleUpon;
-use Core23\ShariffBundle\Service\Vk;
-use Core23\ShariffBundle\Service\Xing;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
+use Nucleos\ShariffBundle\DependencyInjection\NucleosShariffExtension;
+use Nucleos\ShariffBundle\Service\AddThis;
+use Nucleos\ShariffBundle\Service\Buffer;
+use Nucleos\ShariffBundle\Service\Facebook;
+use Nucleos\ShariffBundle\Service\Pinterest;
+use Nucleos\ShariffBundle\Service\Reddit;
+use Nucleos\ShariffBundle\Service\StumbleUpon;
+use Nucleos\ShariffBundle\Service\Vk;
+use Nucleos\ShariffBundle\Service\Xing;
 
-final class Core23ShariffExtensionTest extends AbstractExtensionTestCase
+final class NucleosShariffExtensionTest extends AbstractExtensionTestCase
 {
     public function testLoadDefault(): void
     {
@@ -32,7 +32,7 @@ final class Core23ShariffExtensionTest extends AbstractExtensionTestCase
             'request_factory' => 'my.request_factory',
         ]);
 
-        $this->assertContainerBuilderHasParameter('core23_shariff.services', [
+        $this->assertContainerBuilderHasParameter('nucleos_shariff.services', [
             'addthis', 'buffer', 'pinterest', 'reddit', 'stumbleupon', 'vk', 'xing',
         ]);
 
@@ -71,13 +71,13 @@ final class Core23ShariffExtensionTest extends AbstractExtensionTestCase
             ],
         ]);
 
-        $this->assertContainerBuilderHasParameter('core23_shariff.services', [
+        $this->assertContainerBuilderHasParameter('nucleos_shariff.services', [
             'addthis', 'buffer', 'facebook', 'pinterest', 'reddit', 'stumbleupon', 'vk', 'xing',
         ]);
 
-        $this->assertContainerBuilderHasParameter('core23_shariff.service.facebook.app_id', 'foo_id');
-        $this->assertContainerBuilderHasParameter('core23_shariff.service.facebook.secret', 'app_secret');
-        $this->assertContainerBuilderHasParameter('core23_shariff.service.facebook.version', '1.0');
+        $this->assertContainerBuilderHasParameter('nucleos_shariff.service.facebook.app_id', 'foo_id');
+        $this->assertContainerBuilderHasParameter('nucleos_shariff.service.facebook.secret', 'app_secret');
+        $this->assertContainerBuilderHasParameter('nucleos_shariff.service.facebook.version', '1.0');
 
         $this->assertContainerBuilderHasService(Facebook::class);
     }
@@ -85,7 +85,7 @@ final class Core23ShariffExtensionTest extends AbstractExtensionTestCase
     protected function getContainerExtensions(): array
     {
         return [
-            new Core23ShariffExtension(),
+            new NucleosShariffExtension(),
         ];
     }
 }

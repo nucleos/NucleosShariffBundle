@@ -9,9 +9,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Tests\DependencyInjection;
+namespace Nucleos\ShariffBundle\Tests\DependencyInjection;
 
-use Core23\ShariffBundle\DependencyInjection\Configuration;
+use Nucleos\ShariffBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Processor;
 

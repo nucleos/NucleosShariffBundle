@@ -1,5 +1,5 @@
 {
-    "name": "core23/shariff-bundle",
+    "name": "nucleos/shariff-bundle",
     "type": "symfony-bundle",
     "description": "This bundle provides a wrapper for using shariff inside the sonata-project.",
     "keywords": [
@@ -14,7 +14,7 @@
         "widget",
         "bundle"
     ],
-    "homepage": "https://core23.de",
+    "homepage": "https://nucleos.rocks",
     "license": "MIT",
     "authors": [
         {
@@ -58,12 +58,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Core23\\ShariffBundle\\": "src/"
+            "Nucleos\\ShariffBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Core23\\ShariffBundle\\Tests\\": "tests/"
+            "Nucleos\\ShariffBundle\\Tests\\": "tests/"
         }
     },
     "scripts": {

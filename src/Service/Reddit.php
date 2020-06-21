@@ -9,9 +9,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Service;
+namespace Nucleos\ShariffBundle\Service;
 
-use Core23\ShariffBundle\Service\Exception\FetchException;
+use Nucleos\ShariffBundle\Service\Exception\FetchException;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

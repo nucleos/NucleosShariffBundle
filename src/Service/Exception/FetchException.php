@@ -9,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Service\Exception;
+namespace Nucleos\ShariffBundle\Service\Exception;
 
 use Exception;
 use Psr\Http\Client\ClientExceptionInterface;

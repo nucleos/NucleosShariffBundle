@@ -9,9 +9,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Tests\App;
+namespace Nucleos\ShariffBundle\Tests\App;
 
-use Core23\ShariffBundle\Core23ShariffBundle;
+use Nucleos\ShariffBundle\NucleosShariffBundle;
 use Sonata\BlockBundle\SonataBlockBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
@@ -35,7 +35,7 @@ final class AppKernel extends Kernel
         yield new FrameworkBundle();
         yield new TwigBundle();
         yield new SonataBlockBundle();
-        yield new Core23ShariffBundle();
+        yield new NucleosShariffBundle();
     }
 
     public function getCacheDir(): string

@@ -9,10 +9,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Backend;
+namespace Nucleos\ShariffBundle\Backend;
 
-use Core23\ShariffBundle\Manager\ServiceManager;
-use Core23\ShariffBundle\Service\Exception\FetchException;
+use Nucleos\ShariffBundle\Manager\ServiceManager;
+use Nucleos\ShariffBundle\Service\Exception\FetchException;
 use Psr\Cache\CacheItemPoolInterface;
 use Psr\Cache\InvalidArgumentException;
 use Psr\Http\Client\ClientExceptionInterface;

@@ -9,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Block\Service;
+namespace Nucleos\ShariffBundle\Block\Service;
 
 use Sonata\BlockBundle\Block\BlockContextInterface;
 use Sonata\BlockBundle\Block\Service\AbstractBlockService;
@@ -89,7 +89,7 @@ final class ShariffShareBlockService extends AbstractBlockService implements Edi
                     ],
                 ]],
             ],
-            'translation_domain' => 'Core23ShariffBundle',
+            'translation_domain' => 'NucleosShariffBundle',
         ]);
     }
 
@@ -101,7 +101,7 @@ final class ShariffShareBlockService extends AbstractBlockService implements Edi
             'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
-            'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
+            'template'       => '@NucleosShariff/Block/block_shariff.html.twig',
         ]);
     }
 
@@ -111,7 +111,7 @@ final class ShariffShareBlockService extends AbstractBlockService implements Edi
 
     public function getMetadata(): MetadataInterface
     {
-        return new Metadata('core23_shariff.block.share', null, null, 'Core23ShariffBundle', [
+        return new Metadata('nucleos_shariff.block.share', null, null, 'NucleosShariffBundle', [
             'class' => 'fa fa-share-square-o',
         ]);
     }

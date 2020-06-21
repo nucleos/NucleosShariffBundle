@@ -9,9 +9,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Tests\Block\Service;
+namespace Nucleos\ShariffBundle\Tests\Block\Service;
 
-use Core23\ShariffBundle\Block\Service\ShariffShareBlockService;
+use Nucleos\ShariffBundle\Block\Service\ShariffShareBlockService;
 use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Form\Mapper\FormMapper;
 use Sonata\BlockBundle\Model\Block;
@@ -31,7 +31,7 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
             'services'       => ['twitter', 'facebook', 'googleplus'],
             'theme'          => 'standard',
             'orientation'    => 'horizontal',
-            'template'       => '@Core23Shariff/Block/block_shariff.html.twig',
+            'template'       => '@NucleosShariff/Block/block_shariff.html.twig',
         ], $blockContext);
     }
 
@@ -47,7 +47,7 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
                 'services'    => ['twitter', 'facebook', 'googleplus'],
                 'theme'       => 'standard',
                 'orientation' => 'horizontal',
-                'template'    => '@Core23Shariff/Block/block_shariff.html.twig',
+                'template'    => '@NucleosShariff/Block/block_shariff.html.twig',
             ]
         );
 
@@ -55,7 +55,7 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 
         $this->twig->expects(static::once())->method('render')
             ->with(
-                '@Core23Shariff/Block/block_shariff.html.twig',
+                '@NucleosShariff/Block/block_shariff.html.twig',
                 [
                     'context'  => $blockContext,
                     'settings' => $blockContext->getSettings(),
@@ -77,9 +77,9 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 
         $metadata = $blockService->getMetadata();
 
-        static::assertSame('core23_shariff.block.share', $metadata->getTitle());
+        static::assertSame('nucleos_shariff.block.share', $metadata->getTitle());
         static::assertNull($metadata->getImage());
-        static::assertSame('Core23ShariffBundle', $metadata->getDomain());
+        static::assertSame('NucleosShariffBundle', $metadata->getDomain());
         static::assertSame([
             'class' => 'fa fa-share-square-o',
         ], $metadata->getOptions());

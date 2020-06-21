@@ -9,15 +9,15 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\DependencyInjection;
+namespace Nucleos\ShariffBundle\DependencyInjection;
 
-use Core23\ShariffBundle\Service\Facebook;
+use Nucleos\ShariffBundle\Service\Facebook;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-final class Core23ShariffExtension extends Extension
+final class NucleosShariffExtension extends Extension
 {
     /**
      * @param array<mixed> $configs
@@ -55,12 +55,12 @@ final class Core23ShariffExtension extends Extension
 
             $container->removeDefinition(Facebook::class);
         } else {
-            $container->setParameter('core23_shariff.service.facebook.app_id', $facebook['app_id']);
-            $container->setParameter('core23_shariff.service.facebook.secret', $facebook['secret']);
-            $container->setParameter('core23_shariff.service.facebook.version', $facebook['version'] ?? null);
+            $container->setParameter('nucleos_shariff.service.facebook.app_id', $facebook['app_id']);
+            $container->setParameter('nucleos_shariff.service.facebook.secret', $facebook['secret']);
+            $container->setParameter('nucleos_shariff.service.facebook.version', $facebook['version'] ?? null);
         }
 
-        $container->setParameter('core23_shariff.services', array_values($services));
+        $container->setParameter('nucleos_shariff.services', array_values($services));
     }
 
     /**
@@ -68,9 +68,9 @@ final class Core23ShariffExtension extends Extension
      */
     private function configureAliases(ContainerBuilder $container, array $config): void
     {
-        $container->setAlias('core23_shariff.cache', $config['cache']);
-        $container->setAlias('core23_shariff.http_client', $config['http_client']);
-        $container->setAlias('core23_shariff.request_factory', $config['request_factory']);
+        $container->setAlias('nucleos_shariff.cache', $config['cache']);
+        $container->setAlias('nucleos_shariff.http_client', $config['http_client']);
+        $container->setAlias('nucleos_shariff.request_factory', $config['request_factory']);
     }
 
     /**
@@ -78,6 +78,6 @@ final class Core23ShariffExtension extends Extension
      */
     private function configureDomains(ContainerBuilder $container, array $config): void
     {
-        $container->setParameter('core23_shariff.domains', $config['options']['domains']);
+        $container->setParameter('nucleos_shariff.domains', $config['options']['domains']);
     }
 }

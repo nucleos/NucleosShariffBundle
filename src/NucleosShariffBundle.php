@@ -9,13 +9,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle;
+namespace Nucleos\ShariffBundle;
 
-use Core23\ShariffBundle\DependencyInjection\Compiler\ShariffCompilerPass;
+use Nucleos\ShariffBundle\DependencyInjection\Compiler\ShariffCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class Core23ShariffBundle extends Bundle
+final class NucleosShariffBundle extends Bundle
 {
     public function build(ContainerBuilder $container): void
     {

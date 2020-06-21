@@ -9,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Backend;
+namespace Nucleos\ShariffBundle\Backend;
 
 interface Backend
 {

@@ -9,9 +9,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Manager;
+namespace Nucleos\ShariffBundle\Manager;
 
-use Core23\ShariffBundle\Service\Service;
+use Nucleos\ShariffBundle\Service\Service;
 
 final class StaticServiceManager implements ServiceManager
 {

@@ -16,7 +16,7 @@ twig:
     paths:
         - '%kernel.project_dir%/templates'
 
-core23_shariff:
+nucleos_shariff:
     cache: 'cache.shariff'
     http_client: 'symfony_http_client'
     request_factory: 'nyholm.psr7.psr17_factory'

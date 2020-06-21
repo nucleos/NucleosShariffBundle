@@ -9,9 +9,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Core23\ShariffBundle\Action;
+namespace Nucleos\ShariffBundle\Action;
 
-use Core23\ShariffBundle\Backend\Backend;
+use Nucleos\ShariffBundle\Backend\Backend;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 

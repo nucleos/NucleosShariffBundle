@@ -2,7 +2,7 @@
 
 {% block block %}
     {% apply spaceless %}
-        <div class="shariff{% if settings.class %} {{ settings.class }}{% endif %}" data-backend-url="{{ path('core23_shariff_share') }}"
+        <div class="shariff{% if settings.class %} {{ settings.class }}{% endif %}" data-backend-url="{{ path('nucleos_shariff_share') }}"
              {% if settings.url %}data-url="{{ settings.url }}"{% endif %}
              {% if settings.services %}data-services="[{% for service in settings.services %}&quot;{{ service }}&quot;{{ loop.last ? '' : ', ' }}{% endfor %}]"{% endif %}
              data-theme="{{ settings.theme }}" data-orientation="{{ settings.orientation }}"></div>

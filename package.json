@@ -1,7 +1,7 @@
 {
-  "name": "@core23/shariff-bundle",
+  "name": "@nucleos/shariff-bundle",
   "version": "1.0.0",
-  "homepage": "https://core23.de",
+  "homepage": ,
   "author": "Christian Gripp <mail@core23.de>",
   "dependencies": {
     "shariff": "^3.2"

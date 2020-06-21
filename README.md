@@ -1,15 +1,15 @@
 ShariffBundle
 =============
-[![Latest Stable Version](https://poser.pugx.org/core23/shariff-bundle/v/stable)](https://packagist.org/packages/core23/shariff-bundle)
-[![Latest Unstable Version](https://poser.pugx.org/core23/shariff-bundle/v/unstable)](https://packagist.org/packages/core23/shariff-bundle)
-[![License](https://poser.pugx.org/core23/shariff-bundle/license)](https://packagist.org/packages/core23/shariff-bundle)
+[![Latest Stable Version](https://poser.pugx.org/nucleos/shariff-bundle/v/stable)](https://packagist.org/packages/nucleos/shariff-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/nucleos/shariff-bundle/v/unstable)](https://packagist.org/packages/nucleos/shariff-bundle)
+[![License](https://poser.pugx.org/nucleos/shariff-bundle/license)](https://packagist.org/packages/nucleos/shariff-bundle)
 
-[![Total Downloads](https://poser.pugx.org/core23/shariff-bundle/downloads)](https://packagist.org/packages/core23/shariff-bundle)
-[![Monthly Downloads](https://poser.pugx.org/core23/shariff-bundle/d/monthly)](https://packagist.org/packages/core23/shariff-bundle)
-[![Daily Downloads](https://poser.pugx.org/core23/shariff-bundle/d/daily)](https://packagist.org/packages/core23/shariff-bundle)
+[![Total Downloads](https://poser.pugx.org/nucleos/shariff-bundle/downloads)](https://packagist.org/packages/nucleos/shariff-bundle)
+[![Monthly Downloads](https://poser.pugx.org/nucleos/shariff-bundle/d/monthly)](https://packagist.org/packages/nucleos/shariff-bundle)
+[![Daily Downloads](https://poser.pugx.org/nucleos/shariff-bundle/d/daily)](https://packagist.org/packages/nucleos/shariff-bundle)
 
-[![Continuous Integration](https://github.com/core23/ShariffBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/core23/ShariffBundle/actions)
-[![Code Coverage](https://codecov.io/gh/core23/ShariffBundle/branch/master/graph/badge.svg)](https://codecov.io/gh/core23/ShariffBundle)
+[![Continuous Integration](https://github.com/nucleos/NucleosShariffBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/nucleos/NucleosShariffBundle/actions)
+[![Code Coverage](https://codecov.io/gh/nucleos/NucleosShariffBundle/branch/master/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosShariffBundle)
 
 This bundle provides a wrapper for using [shariff] inside the symfony sonata-project.
 
@@ -18,7 +18,7 @@ This bundle provides a wrapper for using [shariff] inside the symfony sonata-pro
 Open a command console, enter your project directory and execute the following command to download the latest stable version of this bundle:
 
 ```
-composer require core23/shariff-bundle
+composer require nucleos/shariff-bundle
 ```
 
 ### Enable the Bundle
@@ -30,14 +30,14 @@ Then, enable the bundle by adding it to the list of registered bundles in `confi
 
 return [
     // ...
-    Core23\ShariffBundle\Core23ShariffBundle::class => ['all' => true],
+    Nucleos\ShariffBundle\NucleosShariffBundle::class => ['all' => true],
 ];
 ```
 
 Define cache, http client and request factory:
 
 ```
-# config/routes/core23_shariff.yaml
+# config/routes/nucleos_shariff.yaml
 
 framework:
     cache:
@@ -45,7 +45,7 @@ framework:
             cache.shariff:
                 adapter: cache.adapter.filesystem
 
-core23_shariff:
+nucleos_shariff:
     cache: 'cache.shariff'
     http_client: 'some.http.client'         # e.g httplug.client
     request_factory: 'some.request.factory' # e.g. nyholm.psr7.psr17_factory
@@ -68,13 +68,13 @@ yarn add shariff
 
 ### Configure the Bundle
 
-Create a configuration file called `core23_shariff.yaml`:
+Create a configuration file called `nucleos_shariff.yaml`:
 
 ```yaml
-# config/routes/core23_shariff.yaml
+# config/routes/nucleos_shariff.yaml
 
-core23_shariff:
-    resource: "@Core23ShariffBundle/Resources/config/routing/backend.yml"
+nucleos_shariff:
+    resource: "@NucleosShariffBundle/Resources/config/routing/backend.yml"
 ```
 
 Create a configuration file called `framework_cache.yaml`:
@@ -93,7 +93,7 @@ framework:
 ```twig
 {# template.twig #}
 
-{{ sonata_block_render({ 'type': 'core23_shariff.block.share' }, {
+{{ sonata_block_render({ 'type': 'nucleos_shariff.block.share' }, {
     'url': 'https://example.com/site.html'
 }) }}
 ```
@@ -103,7 +103,7 @@ framework:
 You can globally configure the services that should count the likes or favorites for a page.
 
 ```yaml
-core23_shariff:
+nucleos_shariff:
     cache: 'cache.shariff'
     http_client: 'some.http.client'
     request_factory: 'some.request.factory'
