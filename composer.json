@@ -1,7 +1,7 @@
 {
     "name": "nucleos/shariff-bundle",
     "type": "symfony-bundle",
-    "description": "This bundle provides a wrapper for using shariff inside the sonata-project.",
+    "description": "This bundle provides a shariff in symfony applications",
     "keywords": [
         "symfony",
         "shariff",
