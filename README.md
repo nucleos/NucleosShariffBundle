@@ -9,7 +9,7 @@ ShariffBundle
 [![Daily Downloads](https://poser.pugx.org/nucleos/shariff-bundle/d/daily)](https://packagist.org/packages/nucleos/shariff-bundle)
 
 [![Continuous Integration](https://github.com/nucleos/NucleosShariffBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/nucleos/NucleosShariffBundle/actions)
-[![Code Coverage](https://codecov.io/gh/nucleos/NucleosShariffBundle/branch/master/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosShariffBundle)
+[![Code Coverage](https://codecov.io/gh/nucleos/NucleosShariffBundle/branch/main/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosShariffBundle)
 
 This bundle provides a wrapper for using [shariff] inside the symfony sonata-project.
 
