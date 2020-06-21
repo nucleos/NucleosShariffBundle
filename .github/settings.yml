@@ -4,7 +4,7 @@ _extends: .github
 
 repository:
   name: NucleosShariffBundle
-  description: 🛡️ This bundle provides a shariff in symfony applications.
+  description: 🛡️ This bundle provides shariff integration in symfony applications.
   homepage: https://nucleos.rocks
   topics: symfony, symfony-bundle, bundle, php, shariff, sonata, sonata-block
 

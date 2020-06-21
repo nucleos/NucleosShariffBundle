@@ -1,7 +1,7 @@
 {
     "name": "nucleos/shariff-bundle",
     "type": "symfony-bundle",
-    "description": "This bundle provides a shariff in symfony applications",
+    "description": "This bundle provides shariff integration in symfony applications",
     "keywords": [
         "symfony",
         "shariff",
