@@ -10,6 +10,7 @@ NucleosShariffBundle
 
 [![Continuous Integration](https://github.com/nucleos/NucleosShariffBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/nucleos/NucleosShariffBundle/actions)
 [![Code Coverage](https://codecov.io/gh/nucleos/NucleosShariffBundle/branch/main/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosShariffBundle)
+[![Type Coverage](https://shepherd.dev/github/nucleos/NucleosShariffBundle/coverage.svg)](https://shepherd.dev/github/nucleos/NucleosShariffBundle)
 
 This bundle provides a wrapper for using [shariff] inside the symfony sonata-project.
 
