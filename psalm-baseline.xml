@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="3.14.2@3538fe1955d47f6ee926c0769d71af6db08aa488">
+  <file src="src/Backend/PsrBackend.php">
+    <InvalidThrow occurrences="1">
+      <code>InvalidArgumentException</code>
+    </InvalidThrow>
+  </file>
+  <file src="src/Block/Service/ShariffShareBlockService.php">
+    <ParamNameMismatch occurrences="1">
+      <code>$formMapper</code>
+    </ParamNameMismatch>
+  </file>
+  <file src="src/DependencyInjection/Configuration.php">
+    <UndefinedMethod occurrences="3">
+      <code>children</code>
+      <code>children</code>
+      <code>children</code>
+    </UndefinedMethod>
+  </file>
+  <file src="src/Service/Vk.php">
+    <TypeDoesNotContainType occurrences="1">
+      <code>(int) $content</code>
+    </TypeDoesNotContainType>
+  </file>
+</files>
