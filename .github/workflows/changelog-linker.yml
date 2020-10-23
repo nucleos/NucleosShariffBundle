@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  changelo-linker:
+  changelog-linker:
     runs-on: ubuntu-latest
 
     strategy:
