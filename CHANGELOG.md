@@ -38,8 +38,15 @@
 - Use default public setting for all actions @core23 (#16)
 - Removed deprecated name argument from block constructor @core23 (#15)
 
+## Changes
+
+- Add missing strict file header @core23 (#49)
+- Removed deprecated name argument from block constructor @core23 (#15)
+
 ## 🚀 Features
 
+- Move configuration to PHP @core23 (#70)
+- Add combined assets @core23 (#59)
 - Port heise shariff code @core23 (#29)
 - Use latest block bundle for auto-registration of blocks @core23 (#21)
 - Use new block signatures @core23 (#14)
