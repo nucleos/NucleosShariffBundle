@@ -1,3 +1,9 @@
+# 5.1.0
+
+## 📦 Dependencies
+
+- Add support for sonata-project/block-bundle 3 [@core23] ([#171])
+
 # 5.0.0
 
 ## Changes
@@ -63,6 +69,7 @@
 - Drop support for symfony < 4.2 [@core23] ([#34])
 - Removed admin bundle dependency [@core23] ([#20])
 
+[#171]: https://github.com/nucleos/NucleosShariffBundle/pull/171
 [#70]: https://github.com/nucleos/NucleosShariffBundle/pull/70
 [#59]: https://github.com/nucleos/NucleosShariffBundle/pull/59
 [#50]: https://github.com/nucleos/NucleosShariffBundle/pull/50
