@@ -1,3 +1,9 @@
+# 5.1.1
+
+## 🐛 Bug Fixes
+
+- Fix tagging services @core23 (#187)
+
 # 5.1.0
 
 ## 📦 Dependencies
