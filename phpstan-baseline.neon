@@ -35,18 +35,3 @@ parameters:
 			count: 1
 			path: src/Manager/StaticServiceManager.php
 
-		-
-			message: "#^Instantiated class Symfony\\\\Component\\\\HttpKernel\\\\Client not found\\.$#"
-			count: 1
-			path: tests/Action/BackendActionIntegrationTest.php
-
-		-
-			message: "#^Call to method request\\(\\) on an unknown class Symfony\\\\Component\\\\HttpKernel\\\\Client\\.$#"
-			count: 1
-			path: tests/Action/BackendActionIntegrationTest.php
-
-		-
-			message: "#^Call to method getResponse\\(\\) on an unknown class Symfony\\\\Component\\\\HttpKernel\\\\Client\\.$#"
-			count: 1
-			path: tests/Action/BackendActionIntegrationTest.php
-
