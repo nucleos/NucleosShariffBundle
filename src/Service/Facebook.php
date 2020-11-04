@@ -21,7 +21,7 @@ final class Facebook implements Service
     /**
      * @var string
      */
-    private $appid;
+    private $appId;
 
     /**
      * @var string
@@ -33,9 +33,9 @@ final class Facebook implements Service
      */
     private $version;
 
-    public function __construct(string $appid, string $secret, ?string $version = null)
+    public function __construct(string $appId, string $secret, ?string $version = null)
     {
-        $this->appid   = $appid;
+        $this->appId   = $appId;
         $this->secret  = $secret;
         $this->version = $version;
     }
@@ -47,7 +47,7 @@ final class Facebook implements Service
 
     public function createRequest(RequestFactoryInterface $factory, string $url): RequestInterface
     {
-        $accessToken = urlencode($this->appid).'|'.urlencode($this->secret);
+        $accessToken = urlencode($this->appId).'|'.urlencode($this->secret);
 
         $query       = sprintf(
             'https://graph.facebook.com/%s?id=%s&fields=engagement&access_token=%s',

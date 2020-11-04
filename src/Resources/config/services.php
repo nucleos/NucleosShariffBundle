@@ -21,15 +21,14 @@ use Symfony\Component\DependencyInjection\Reference;
 return static function (ContainerConfigurator $container): void {
     $services = $container->services();
 
-    $services->load('Nucleos\\ShariffBundle\\Service\\', '../../Service')
-        ->exclude('../../Service/{Exception}')
-        ->public()
-        ->autowire()
-        ->autoconfigure()
-    ;
-
     $services
+        ->load('Nucleos\\ShariffBundle\\Service\\', '../../Service')
+            ->exclude('../../Service/{Exception,Facebook}')
+            ->public()
+            ->tag('nucleos.shariff')
+
         ->set(Facebook::class)
+            ->public()
             ->tag('nucleos.shariff')
             ->args([
                 new Parameter('nucleos_shariff.service.facebook.app_id'),

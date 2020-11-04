@@ -1,5 +1,6 @@
 framework:
     secret: secret
+    test: true
 
     cache:
         pools:
@@ -7,10 +8,7 @@ framework:
                 adapter: cache.adapter.filesystem
 
     session:
-        handler_id:  session.handler.native_file
-        save_path:   '%kernel.project_dir%/sessions/%kernel.environment%'
-        cookie_secure: auto
-        cookie_samesite: lax
+        storage_id: session.storage.mock_file
 
 twig:
     paths:
@@ -21,12 +19,20 @@ nucleos_shariff:
     http_client: 'symfony_http_client'
     request_factory: 'nyholm.psr7.psr17_factory'
 
+    services:
+        facebook:
+            app_id: 'foo_id'
+            secret: 'app_secret'
+            version: 1.0'
+
 services:
     _defaults:
-        public: false
+        public: true
 
     symfony_http_client:
         class: Symfony\Component\HttpClient\Psr18Client
 
     nyholm.psr7.psr17_factory:
         class: Nyholm\Psr7\Factory\Psr17Factory
+
+    test_service_manager: '@Nucleos\ShariffBundle\Manager\ServiceManager'
