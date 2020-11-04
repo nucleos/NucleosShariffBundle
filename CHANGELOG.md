@@ -2,7 +2,7 @@
 
 ## 🐛 Bug Fixes
 
-- Fix tagging services @core23 (#187)
+- Fix tagging services [@core23] ([#187])
 
 # 5.1.0
 
@@ -92,3 +92,4 @@
 [#14]: https://github.com/nucleos/NucleosShariffBundle/pull/14
 [@nucleos]: https://github.com/nucleos
 [@core23]: https://github.com/core23
+[#187]: https://github.com/nucleos/NucleosShariffBundle/pull/187
