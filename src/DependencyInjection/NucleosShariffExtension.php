@@ -46,8 +46,8 @@ final class NucleosShariffExtension extends Extension
         $facebook = $config['services']['facebook'] ?? null;
 
         if (
-            !isset($facebook['app_id'], $facebook['secret']) ||
-            null === $facebook['app_id'] || null === $facebook['secret']
+            !isset($facebook['app_id'], $facebook['secret'])
+            || null === $facebook['app_id'] || null === $facebook['secret']
         ) {
             if (false !== ($key = array_search('facebook', $services, true))) {
                 unset($services[$key]);
