@@ -35,6 +35,6 @@ final class Vk implements Service
         $content = $response->getBody()->getContents();
         $content = mb_substr($content, 18, mb_strlen($content) - 20);
 
-        return (int) $content ?? 0;
+        return (int) $content;
     }
 }
