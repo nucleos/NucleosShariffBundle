@@ -8,7 +8,7 @@ NucleosShariffBundle
 [![Monthly Downloads](https://poser.pugx.org/nucleos/shariff-bundle/d/monthly)](https://packagist.org/packages/nucleos/shariff-bundle)
 [![Daily Downloads](https://poser.pugx.org/nucleos/shariff-bundle/d/daily)](https://packagist.org/packages/nucleos/shariff-bundle)
 
-[![Continuous Integration](https://github.com/nucleos/NucleosShariffBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/nucleos/NucleosShariffBundle/actions?query=workflow%3A"Continuous+Integration")
+[![Continuous Integration](https://github.com/nucleos/NucleosShariffBundle/workflows/Continuous%20Integration/badge.svg?event=push)](https://github.com/nucleos/NucleosShariffBundle/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
 [![Code Coverage](https://codecov.io/gh/nucleos/NucleosShariffBundle/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosShariffBundle)
 [![Type Coverage](https://shepherd.dev/github/nucleos/NucleosShariffBundle/coverage.svg)](https://shepherd.dev/github/nucleos/NucleosShariffBundle)
 
