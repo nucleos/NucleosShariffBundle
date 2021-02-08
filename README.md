@@ -8,8 +8,8 @@ NucleosShariffBundle
 [![Monthly Downloads](https://poser.pugx.org/nucleos/shariff-bundle/d/monthly)](https://packagist.org/packages/nucleos/shariff-bundle)
 [![Daily Downloads](https://poser.pugx.org/nucleos/shariff-bundle/d/daily)](https://packagist.org/packages/nucleos/shariff-bundle)
 
-[![Continuous Integration](https://github.com/nucleos/NucleosShariffBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/nucleos/NucleosShariffBundle/actions?query=workflow%3A"Continuous+Integration"+branch%3Amain)
-[![Code Coverage](https://codecov.io/gh/nucleos/NucleosShariffBundle/branch/main/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosShariffBundle)
+[![Continuous Integration](https://github.com/nucleos/NucleosShariffBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/nucleos/NucleosShariffBundle/actions?query=workflow%3A"Continuous+Integration")
+[![Code Coverage](https://codecov.io/gh/nucleos/NucleosShariffBundle/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosShariffBundle)
 [![Type Coverage](https://shepherd.dev/github/nucleos/NucleosShariffBundle/coverage.svg)](https://shepherd.dev/github/nucleos/NucleosShariffBundle)
 
 This bundle provides a wrapper for using [shariff] inside the symfony sonata-project.
