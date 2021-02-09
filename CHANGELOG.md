@@ -1,18 +1,45 @@
-# 5.1.1
+# Changelog
 
-## 🐛 Bug Fixes
+All notable changes to this project will be documented in this file, in reverse chronological order by release.
+
+## 5.2.0 - TBD
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
+
+## 5.1.1
+
+### 🐛 Bug Fixes
 
 - Fix tagging services [@core23] ([#187])
 
-# 5.1.0
+## 5.1.0
 
-## 📦 Dependencies
+### 📦 Dependencies
 
 - Add support for sonata-project/block-bundle 3 [@core23] ([#171])
 
-# 5.0.0
+## 5.0.0
 
-## Changes
+### Changes
 
 - Renamed namespace `Core23\ShariffBundle` to `Nucleos\ShariffBundle` after move to [@nucleos]
 
@@ -50,12 +77,12 @@
 - Use default public setting for all actions [@core23] ([#16])
 - Removed deprecated name argument from block constructor [@core23] ([#15])
 
-## Changes
+### Changes
 
 - Add missing strict file header [@core23] ([#49])
 - Removed deprecated name argument from block constructor [@core23] ([#15])
 
-## 🚀 Features
+### 🚀 Features
 
 - Move configuration to PHP [@core23] ([#70])
 - Add combined assets [@core23] ([#59])
@@ -63,12 +90,12 @@
 - Use latest block bundle for auto-registration of blocks [@core23] ([#21])
 - Use new block signatures [@core23] ([#14])
 
-## 🐛 Bug Fixes
+### 🐛 Bug Fixes
 
 - Fix wrong dependency injection of ShariffShareBlockService [@core23] ([#50])
 - Remove deprecated twig calls [@core23] ([#23])
 
-## 📦 Dependencies
+### 📦 Dependencies
 
 - Add support for symfony 5 [@core23] ([#25])
 - Bump sonata block version [@core23] ([#32])
