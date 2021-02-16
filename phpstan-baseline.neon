@@ -1,6 +1,16 @@
 parameters:
 	ignoreErrors:
 		-
+			message: "#^Property Nucleos\\\\ShariffBundle\\\\Backend\\\\PsrBackend\\:\\:\\$requestFactory has unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface as its type\\.$#"
+			count: 1
+			path: src/Backend/PsrBackend.php
+
+		-
+			message: "#^Parameter \\$requestFactory of method Nucleos\\\\ShariffBundle\\\\Backend\\\\PsrBackend\\:\\:__construct\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Backend/PsrBackend.php
+
+		-
 			message: "#^Call to function in_array\\(\\) with arguments string, array\\(\\) and true will always evaluate to false\\.$#"
 			count: 1
 			path: src/Backend/PsrBackend.php
@@ -34,4 +44,109 @@ parameters:
 			message: "#^Instanceof between Nucleos\\\\ShariffBundle\\\\Service\\\\Service and Nucleos\\\\ShariffBundle\\\\Service\\\\Service will always evaluate to true\\.$#"
 			count: 1
 			path: src/Manager/StaticServiceManager.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\AddThis\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/AddThis.php
+
+		-
+			message: "#^Call to method createRequest\\(\\) on an unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/AddThis.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\Buffer\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Buffer.php
+
+		-
+			message: "#^Call to method createRequest\\(\\) on an unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Buffer.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\Facebook\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Facebook.php
+
+		-
+			message: "#^Call to method createRequest\\(\\) on an unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Facebook.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\Pinterest\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Pinterest.php
+
+		-
+			message: "#^Call to method createRequest\\(\\) on an unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Pinterest.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\Reddit\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Reddit.php
+
+		-
+			message: "#^Call to method createRequest\\(\\) on an unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Reddit.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\Service\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Service.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\StumbleUpon\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/StumbleUpon.php
+
+		-
+			message: "#^Call to method createRequest\\(\\) on an unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/StumbleUpon.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\Vk\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Vk.php
+
+		-
+			message: "#^Call to method createRequest\\(\\) on an unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Vk.php
+
+		-
+			message: "#^Parameter \\$factory of method Nucleos\\\\ShariffBundle\\\\Service\\\\Xing\\:\\:createRequest\\(\\) has invalid typehint type Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Xing.php
+
+		-
+			message: "#^Call to method createRequest\\(\\) on an unknown class Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\.$#"
+			count: 1
+			path: src/Service/Xing.php
+
+		-
+			message: "#^Generator expects value type Symfony\\\\Component\\\\HttpKernel\\\\Bundle\\\\BundleInterface, Symfony\\\\Bundle\\\\TwigBundle\\\\TwigBundle given\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Bundle\\\\TwigBundle\\\\TwigBundle not found\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Generator expects value type Symfony\\\\Component\\\\HttpKernel\\\\Bundle\\\\BundleInterface, Sonata\\\\BlockBundle\\\\SonataBlockBundle given\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Instantiated class Sonata\\\\BlockBundle\\\\SonataBlockBundle not found\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
 
