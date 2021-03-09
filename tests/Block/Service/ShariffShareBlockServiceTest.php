@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Nucleos\ShariffBundle\Tests\Block\Service;
 
+use LogicException;
 use Nucleos\ShariffBundle\Block\Service\ShariffShareBlockService;
 use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Form\Mapper\FormMapper;
@@ -69,6 +70,23 @@ final class ShariffShareBlockServiceTest extends BlockServiceTestCase
 
         static::assertSame($response, $blockService->execute($blockContext, $response));
         static::assertSame('TWIG_CONTENT', $response->getContent());
+    }
+
+    public function testExecuteWithNullTemplate(): void
+    {
+        $this->expectException(LogicException::class);
+        $this->expectExceptionMessage('Cannot render block without template');
+
+        $block = new Block();
+
+        $blockContext = new BlockContext($block, [
+            'template'    => null,
+        ]);
+
+        $response = new Response();
+
+        $blockService = new ShariffShareBlockService($this->twig);
+        $blockService->execute($blockContext, $response);
     }
 
     public function testGetMetadata(): void

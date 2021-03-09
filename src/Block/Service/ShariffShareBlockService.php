@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Nucleos\ShariffBundle\Block\Service;
 
+use LogicException;
 use Sonata\BlockBundle\Block\BlockContextInterface;
 use Sonata\BlockBundle\Block\Service\AbstractBlockService;
 use Sonata\BlockBundle\Block\Service\EditableBlockService;
@@ -34,6 +35,10 @@ final class ShariffShareBlockService extends AbstractBlockService implements Edi
             'settings' => $blockContext->getSettings(),
             'block'    => $blockContext->getBlock(),
         ];
+
+        if (!\is_string($blockContext->getTemplate())) {
+            throw new LogicException('Cannot render block without template');
+        }
 
         return $this->renderResponse($blockContext->getTemplate(), $parameters, $response);
     }
