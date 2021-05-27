@@ -19,12 +19,15 @@ use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Log\LoggerAwareInterface;
-use Psr\Log\LoggerAwareTrait;
+use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
 final class PsrBackend implements Backend, LoggerAwareInterface
 {
-    use LoggerAwareTrait;
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
 
     /**
      * @var ServiceManager
@@ -90,6 +93,11 @@ final class PsrBackend implements Backend, LoggerAwareInterface
         $this->saveCacheEntry($cacheKey, $counts);
 
         return $counts;
+    }
+
+    public function setLogger(LoggerInterface $logger): void
+    {
+        $this->logger = $logger;
     }
 
     private function isValidDomain(string $url): bool
