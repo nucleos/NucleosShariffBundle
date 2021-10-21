@@ -124,7 +124,7 @@ This is a fork of [shariff-php] with a more modern and dynamic solution.
 
 ## License
 
-This bundle is under the [MIT license](LICENSE.md).
+<a href="https://github.com/nucleos/NucleosShariffBundle/blob/3.3.x/LICENSE.md"><img alt="GitHub license" src="https://img.shields.io/github/license/nucleos/NucleosShariffBundle?style=for-the-badge"></a>
 
 [shariff]: https://github.com/heiseonline/shariff
 [shariff-php]: https://github.com/heiseonline/shariff-backend-php
