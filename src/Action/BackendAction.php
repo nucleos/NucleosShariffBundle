@@ -29,7 +29,7 @@ final class BackendAction
 
     public function __invoke(Request $request): JsonResponse
     {
-        $url    = $request->get('url', '');
+        $url = $request->query->get('url', '');
 
         if ('' === $url) {
             return new JsonResponse();

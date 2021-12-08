@@ -1,17 +1,12 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Call to function in_array\\(\\) with arguments string, array\\(\\) and true will always evaluate to false\\.$#"
+			message: "#^Call to function in_array\\(\\) with arguments string, array\\{\\} and true will always evaluate to false\\.$#"
 			count: 1
 			path: src/Backend/PsrBackend.php
 
 		-
-			message: "#^Offset 'host' does not exist on array\\(\\?'scheme' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'user' \\=\\> string, \\?'pass' \\=\\> string, \\?'path' \\=\\> string, \\?'query' \\=\\> string, \\?'fragment' \\=\\> string\\)\\.$#"
-			count: 1
-			path: src/Backend/PsrBackend.php
-
-		-
-			message: "#^PHPDoc tag @throws with type Psr\\\\Cache\\\\InvalidArgumentException is not subtype of Throwable$#"
+			message: "#^Offset 'host' does not exist on array\\{scheme\\?\\: string, host\\?\\: string, port\\?\\: int, user\\?\\: string, pass\\?\\: string, path\\?\\: string, query\\?\\: string, fragment\\?\\: string\\}\\.$#"
 			count: 1
 			path: src/Backend/PsrBackend.php
 
@@ -34,4 +29,19 @@ parameters:
 			message: "#^Instanceof between Nucleos\\\\ShariffBundle\\\\Service\\\\Service and Nucleos\\\\ShariffBundle\\\\Service\\\\Service will always evaluate to true\\.$#"
 			count: 1
 			path: src/Manager/StaticServiceManager.php
+
+		-
+			message: "#^Method Nucleos\\\\ShariffBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:configureContainer\\(\\) has parameter \\$container with no type specified\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Method Nucleos\\\\ShariffBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:configureContainer\\(\\) has parameter \\$loader with no type specified\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Method Nucleos\\\\ShariffBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:configureRoutes\\(\\) has parameter \\$routes with no type specified\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
 
