@@ -2,27 +2,35 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 3.3.0 - TBD
+## 3.3.0 - 2021-12-08
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [3.3.0](https://github.com/nucleos/NucleosShariffBundle/milestone/3)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 3.3.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **6**
+- Total contributors: **1**
 
-### Removed
+#### dependency
 
-- Nothing.
+ - [608: Add symfony 6 support](https://github.com/nucleos/NucleosShariffBundle/pull/608) thanks to @core23
+ - [607: Drop symfony 4 support](https://github.com/nucleos/NucleosShariffBundle/pull/607) thanks to @core23
+ - [593: Drop PHP 7 support](https://github.com/nucleos/NucleosShariffBundle/pull/593) thanks to @core23
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [606: Drop node-sass](https://github.com/nucleos/NucleosShariffBundle/pull/606) thanks to @core23
+ - [603: Update tools and use make to run them](https://github.com/nucleos/NucleosShariffBundle/pull/603) thanks to @core23
+
+#### Bug
+
+ - [364: Throw LogicException when rendering block without template](https://github.com/nucleos/NucleosShariffBundle/pull/364) thanks to @core23
 
 ## 5.2.0 - TBD
 
