@@ -3,6 +3,7 @@
     "description": "This bundle provides shariff integration in symfony applications",
     "license": "MIT",
     "type": "symfony-bundle",
+    "abandoned": true,
     "keywords": [
         "symfony",
         "shariff",
